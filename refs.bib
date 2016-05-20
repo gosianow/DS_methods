@@ -1,0 +1,1045 @@
+%%———————————————————————————————————
+% Dirichlet-multinomial distribution
+%%———————————————————————————————————
+
+@article{Tvedebrink2010,
+abstract = {We present a statistical model for incorporating the extra variability in allelic counts due to subpopulation structures. In forensic genetics, this effect is modelled by the identical-by-descent parameter ??, which measures the relationship between pairs of alleles within a population relative to the relationship of alleles between populations (Weir, 2007). In our statistical approach, we demonstrate that ?? may be defined as an overdispersion parameter capturing the subpopulation effects. This formulation allows derivation of maximum likelihood estimates of the allele probabilities and ?? together with computation of the profile log-likelihood, confidence intervals and hypothesis testing. In order to compare our method with existing methods, we reanalysed FBI data from Budowle and Moretti (1999) with allele counts in six US subpopulations. Furthermore, we investigate properties of our methodology from simulation studies. ?? 2010 Elsevier Inc.},
+author = {Tvedebrink, Torben},
+file = {:Users/gosia/Documents/Mendeley Desktop/Tvedebrink/Tvedebrink - 2010 - Overdispersion in allelic counts and $\theta$-correction in forensic genetics.pdf:pdf},
+journal = {Theoretical Population Biology},
+keywords = {Confidence interval,Dirichlet-multinomial,Dirichlet-multinomial distribution,Forensic genetics,Maximum likelihood estimate,Subpopulation,dirmult,$\theta$-correction},
+mendeley-groups = {Project DM,Project DM/DM parameter estimation},
+mendeley-tags = {Dirichlet-multinomial,dirmult},
+number = {3},
+pages = {200--210},
+pmid = {20633572},
+title = {{Overdispersion in allelic counts and $\theta$-correction in forensic genetics}},
+volume = {78},
+year = {2010}
+}
+
+@article{MOSIMANN01011962,
+author = {Mosimann, James E.}, 
+title = {On the compound multinomial distribution, the multivariate B-distribution, and correlations among proportions},
+volume = {49}, 
+number = {1-2}, 
+pages = {65-82}, 
+year = {1962}, 
+doi = {10.1093/biomet/49.1-2.65}, 
+URL = {http://biomet.oxfordjournals.org/content/49/1-2/65.short}, 
+eprint = {http://biomet.oxfordjournals.org/content/49/1-2/65.full.pdf+html}, 
+journal = {Biometrika} 
+}
+
+@article{Farewell2013,
+abstract = {A generic random effects formulation for the Dirichlet negative multinomial distribution is developed together with a convenient regression parameterization. A simulation study indicates that, even when somewhat misspecified, regression models based on the Dirichlet negative multinomial distribution have smaller median absolute error than generalized estimating equations, with a particularly pronounced improvement when correlation between observations in a cluster is high. Estimation of explanatory variable effects and sources of variation is illustrated for a study of clinical trial recruitment.},
+author = {Farewell, Daniel M. and Farewell, Vernon T.},
+file = {:Users/gosia/Documents/Mendeley Desktop/Farewell, Farewell/Farewell, Farewell - 2013 - Dirichlet negative multinomial regression for overdispersed correlated count data.pdf:pdf},
+journal = {Biostatistics},
+keywords = {Dirichlet negative multinomial,Longitudinal count data,Regression,Sources of variation},
+mendeley-groups = {Project DM/.To check out,.DRIMSeq paper},
+mendeley-tags = {Dirichlet negative multinomial},
+number = {2},
+pages = {395--404},
+pmid = {23221819},
+title = {{Dirichlet negative multinomial regression for overdispersed correlated count data}},
+volume = {14},
+year = {2013}
+}
+
+@article{Chen2013,
+abstract = {With the development of next generation sequencing technology, researchers have now been able to study the microbiome composition using direct sequencing, whose output are bacterial taxa counts for each microbiome sample. One goal of microbiome study is to associate the microbiome composition with environmental covariates. We propose to model the taxa counts using a Dirichlet-multinomial (DM) regression model in order to account for overdispersion of observed counts. The DM regression model can be used for testing the association between taxa composition and covariates using the likelihood ratio test. However, when the number of the covariates is large, multiple testing can lead to loss of power. To deal with the high dimensionality of the problem, we develop a penalized likelihood approach to estimate the regression parameters and to select the variables by imposing a sparse group [Formula: see text] penalty to encourage both group-level and within-group sparsity. Such a variable selection procedure can lead to selection of the relevant covariates and their associated bacterial taxa. An efficient block-coordinate descent algorithm is developed to solve the optimization problem. We present extensive simulations to demonstrate that the sparse DM regression can result in better identification of the microbiome-associated covariates than models that ignore overdispersion or only consider the proportions. We demonstrate the power of our method in an analysis of a data set evaluating the effects of nutrient intake on human gut microbiome composition. Our results have clearly shown that the nutrient intake is strongly associated with the human gut microbiome.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1305.5355v1},
+author = {Chen, Jun and Li, Hongzhe},
+doi = {10.1214/12-AOAS592},
+eprint = {arXiv:1305.5355v1},
+file = {:Users/gosia/Documents/Mendeley Desktop/Chen, Li/Chen, Li - 2013 - Variable Selection for Sparse Dirichlet-Multinomial Regression With an Application To Microbiome Data Analysis.pdf:pdf},
+issn = {1932-6157},
+journal = {The annals of applied statistics},
+keywords = {Coordinate descent,Dirichlet-multinomial,Regression,Variable selection,counts data,overdispersion,r},
+mendeley-groups = {Project DM/DM regression,.DRIMSeq paper},
+mendeley-tags = {Dirichlet-multinomial,Regression,Variable selection},
+number = {1},
+pages = {418--442},
+pmid = {24312162},
+title = {{Variable Selection for Sparse Dirichlet-Multinomial Regression With an Application To Microbiome Data Analysis}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3846354{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {7},
+year = {2013}
+}
+
+@article{Finak2014,
+abstract = {Blood and tissue are composed of many functionally distinct cell subsets. In immunological studies, these can be measured accurately only using single-cell assays. The characterization of these small cell subsets is crucial to decipher system-level biological changes. For this reason, an increasing number of studies rely on assays that provide single-cell measurements of multiple genes and proteins from bulk cell samples. A common problem in the analysis of such data is to identify biomarkers (or combinations of biomarkers) that are differentially expressed between two biological conditions (e.g. before/after stimulation), where expression is defined as the proportion of cells expressing that biomarker (or biomarker combination) in the cell subset(s) of interest. Here, we present a Bayesian hierarchical framework based on a beta-binomial mixture model for testing for differential biomarker expression using single-cell assays. Our model allows the inference to be subject specific, as is typically required when assessing vaccine responses, while borrowing strength across subjects through common prior distributions. We propose two approaches for parameter estimation: an empirical-Bayes approach using an Expectation-Maximization algorithm and a fully Bayesian one based on a Markov chain Monte Carlo algorithm. We compare our method against classical approaches for single-cell assays including Fisher's exact test, a likelihood ratio test, and basic log-fold changes. Using several experimental assays measuring proteins or genes at single-cell level and simulations, we show that our method has higher sensitivity and specificity than alternative methods. Additional simulations show that our framework is also robust to model misspecification. Finally, we demonstrate how our approach can be extended to testing multivariate differential expression across multiple biomarker combinations using a Dirichlet-multinomial model and illustrate this approach using single-cell gene expression data and simulations.},
+author = {Finak, Greg and Mcdavid, Andrew and Chattopadhyay, Pratip and Dominguez, Maria and {De Rosa}, Steve and Roederer, Mario and Gottardo, Raphael},
+journal = {Biostatistics},
+keywords = {Bayesian modeling,Expectation-Maximization,Flow cytometry,Hierarchical modeling,Immunology,MIMOSA,Marginal likelihood,Markov Chain Monte Carlo,Single-cell gene expression},
+mendeley-groups = {.DRIMSeq paper},
+mendeley-tags = {MIMOSA},
+number = {1},
+pages = {87--101},
+title = {{Mixture models for single-cell assays with applications to vaccine studies}},
+volume = {15},
+year = {2014}
+}
+
+@article{Samb2015,
+abstract = {Genome-wide mapping of nucleosomes has revealed a great deal about the relationships between chromatin structure and control of gene expression. Recent next generation CHIP-chip and CHIP-Seq technologies have accelerated our understanding of basic principles of chromatin organization. These technologies have taught us that nucleosomes play a crucial role in gene regulation by allowing physical access to transcription factors. Recent methods and experimental advancements allow the determination of nucleosome positions for a given genome area. However, most of these methods estimate the number of nucleosomes either by an EM algorithm using a BIC criterion or an effective heuristic strategy. Here, we introduce a Bayesian method for identifying nucleosome positions. The proposed model is based on a Multinomial-Dirichlet classification and a hierarchical mixture distributions. The number and the positions of nucleosomes are estimated using a reversible jump Markov chain Monte Carlo simulation technique. We compare the performance of our method on simulated data and MNase-Seq data from Saccharomyces cerevisiae against PING and NOrMAL methods.},
+author = {Samb, Rawane and Khadraoui, Khader and Belleau, Pascal and Desch{\^{e}}nes, Astrid and Lakhal-Chaieb, Lajmi and Droit, Arnaud},
+journal = {Statistical Applications in Genetics and Molecular Biology},
+keywords = {Bayesian t-mixture,Multinomial-Dirichlet prior,genome-wide profiling,nucleosome positioning,reversible-jump MCMC},
+mendeley-groups = {.DRIMSeq paper},
+number = {6},
+pages = {517--532},
+publisher = {Walter de Gruyter GmbH},
+title = {{Using informative Multinomial-Dirichlet prior in a t-mixture with reversible jump estimation of nucleosome positions for genome-wide profiling}},
+url = {http://www.degruyter.com/view/j/sagmb.2015.14.issue-6/sagmb-2014-0098/sagmb-2014-0098.xml},
+volume = {14},
+year = {2015}
+}
+
+%%———————————————————————————————————
+% Dirichlet negative multinomial
+%%———————————————————————————————————
+
+@article{Mosimann1963,
+author = {Mosimann, James E},
+doi = {10.2307/2333745},
+issn = {00063444},
+journal = {Biometrika},
+mendeley-groups = {.DRIMSeq paper},
+number = {1/2},
+pages = {47--54},
+publisher = {[Oxford University Press, Biometrika Trust]},
+title = {{On the Compound Negative Multinomial Distribution and Correlations Among Inversely Sampled Pollen Counts}},
+url = {http://www.jstor.org/stable/2333745},
+volume = {50},
+year = {1963}
+}
+
+
+
+%%———————————————————————————————————
+% Beta-binomial
+%%———————————————————————————————————
+
+
+@article{Sun2014,
+abstract = {Bisulfite sequencing (BS-seq) is the gold standard for studying genome-wide DNA methylation. We developed MOABS to increase the speed, accuracy, statistical power and biological relevance of BS-seq data analysis. MOABS detects differential methylation with 10-fold coverage at single-CpG resolution based on a Beta-Binomial hierarchical model and is capable of processing two billion reads in 24 CPU hours. Here, using simulated and real BS-seq data, we demonstrate that MOABS outperforms other leading algorithms, such as Fisher's exact test and BSmooth. Furthermore, MOABS analysis can be easily extended to differential 5hmC analysis using RRBS and oxBS-seq. MOABS is available at http://code.google.com/p/moabs/.},
+author = {Sun, Deqiang and Xi, Yuanxin and Rodriguez, Benjamin and Park, Hyun Jung and Tong, Pan and Meong, Mira and Goodell, Margaret A and Li, Wei},
+journal = {Genome biology},
+keywords = {Algorithms,CpG Islands,CpG Islands: genetics,DNA Methylation,DNA Methylation: genetics,High-Throughput Nucleotide Sequencing,High-Throughput Nucleotide Sequencing: methods,Humans,Models, Statistical,Sequence Analysis, DNA,Sequence Analysis, DNA: methods,Software},
+mendeley-groups = {DNA methylation,.DRIMSeq paper},
+number = {2},
+pages = {R38},
+title = {{MOABS: model based analysis of bisulfite sequencing data.}},
+url = {http://genomebiology.com/2014/15/2/R38},
+volume = {15},
+year = {2014}
+}
+@article{Park2014,
+abstract = {MOTIVATION:: DNA methylation plays critical roles in gene regulation and cellular specification without altering DNA sequences. The wide application of reduced representation bisulfite sequencing (RRBS) and whole genome bisulfite sequencing (bis-seq) opens the door to study DNA methylation at single CpG site resolution. One challenging question is how best to test for significant methylation differences between groups of biological samples in order to minimize false positive findings. RESULTS:: We present a statistical analysis package, methylSig, to analyse genome-wide methylation differences between samples from different treatments or disease groups. MethylSig takes into account both read coverage and biological variation by utilizing a beta-binomial approach across biological samples for a CpG site or region, and identifies relevant differences in CpG methylation. It can also incorporate local information to improve group methylation level and/or variance estimation for experiments with small sample size. A permutation study based on data from enhanced RRBS samples shows that methylSig maintains a well-calibrated type-I error when the number of samples is three or more per group. Our simulations show that methylSig has higher sensitivity compared with several alternative methods. The use of methylSig is illustrated with a comparison of different subtypes of acute leukemia and normal bone marrow samples. Availability: methylSig is available as an R package at http://sartorlab.ccmb.med.umich.edu/software. Contact: sartorma@umich.edu Supplementary information: Supplementary data are available at Bioinformatics online.},
+author = {Park, Yongseok and Figueroa, Maria E and Rozek, Laura S and Sartor, Maureen A},
+doi = {10.1093/bioinformatics/btu339},
+file = {:Users/gosia/Documents/Mendeley Desktop/Park et al/Park et al. - 2014 - MethylSig a whole genome DNA methylation analysis pipeline.pdf:pdf},
+issn = {1367-4811},
+journal = {Bioinformatics (Oxford, England)},
+mendeley-groups = {DNA methylation,.DRIMSeq paper},
+pages = {1--8},
+pmid = {24836530},
+title = {{MethylSig: a whole genome DNA methylation analysis pipeline}},
+url = {http://bioinformatics.oxfordjournals.org/content/early/2014/05/15/bioinformatics.btu339.short$\backslash$nhttp://www.ncbi.nlm.nih.gov/pubmed/24836530},
+year = {2014}
+}
+@article{Feng2014,
+abstract = {DNA methylation is an important epigenetic modification that has essential roles in cellular processes including gene regulation, development and disease and is widely dysregulated in most types of cancer. Recent advances in sequencing technology have enabled the measurement of DNA methylation at single nucleotide resolution through methods such as whole-genome bisulfite sequencing and reduced representation bisulfite sequencing. In DNA methylation studies, a key task is to identify differences under distinct biological contexts, for example, between tumor and normal tissue. A challenge in sequencing studies is that the number of biological replicates is often limited by the costs of sequencing. The small number of replicates leads to unstable variance estimation, which can reduce accuracy to detect differentially methylated loci (DML). Here we propose a novel statistical method to detect DML when comparing two treatment groups. The sequencing counts are described by a lognormal-beta-binomial hierarchical model, which provides a basis for information sharing across different CpG sites. A Wald test is developed for hypothesis testing at each CpG site. Simulation results show that the proposed method yields improved DML detection compared to existing methods, particularly when the number of replicates is low. The proposed method is implemented in the Bioconductor package DSS.},
+author = {Feng, Hao and Conneely, Karen N and Wu, Hao},
+file = {:Users/gosia/Documents/Mendeley Desktop/Feng, Conneely, Wu/Feng, Conneely, Wu - 2014 - A Bayesian hierarchical model to detect differentially methylated loci from single nucleotide resolution seq.pdf:pdf},
+journal = {Nucleic acids research},
+keywords = {Bayesian inference,Beta-Binomial,DNA methylation,DSS},
+mendeley-groups = {DNA methylation,.DRIMSeq paper},
+mendeley-tags = {Bayesian inference,Beta-Binomial,DNA methylation,DSS},
+number = {8},
+pages = {e69},
+pmid = {24561809},
+title = {{A Bayesian hierarchical model to detect differentially methylated loci from single nucleotide resolution sequencing data.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/24561809},
+volume = {42},
+year = {2014}
+}
+
+%%———————————————————————————————————
+% polyA-seq
+%%———————————————————————————————————
+
+@article{Derti2012,
+abstract = {We developed PolyA-seq, a strand-specific and quantitative method for high-throughput sequencing of 3' ends of polyadenylated transcripts, and used it to globally map polyadenylation (polyA) sites in 24 matched tissues in human, rhesus, dog, mouse, and rat. We show that PolyA-seq is as accurate as existing RNA sequencing (RNA-seq) approaches for digital gene expression (DGE), enabling simultaneous mapping of polyA sites and quantitative measurement of their usage. In human, we confirmed 158,533 known sites and discovered 280,857 novel sites (FDR {\textless} 2.5{\%}). On average 10{\%} of novel human sites were also detected in matched tissues in other species. Most novel sites represent uncharacterized alternative polyA events and extensions of known transcripts in human and mouse, but primarily delineate novel transcripts in the other three species. A total of 69.1{\%} of known human genes that we detected have multiple polyA sites in their 3'UTRs, with 49.3{\%} having three or more. We also detected polyadenylation of noncoding and antisense transcripts, including constitutive and tissue-specific primary microRNAs. The canonical polyA signal was strongly enriched and positionally conserved in all species. In general, usage of polyA sites is more similar within the same tissues across different species than within a species. These quantitative maps of polyA usage in evolutionarily and functionally related samples constitute a resource for understanding the regulatory mechanisms underlying alternative polyadenylation.},
+author = {Derti, Adnan and Garrett-Engele, Philip and MacIsaac, Kenzie D. and Stevens, Richard C. and Sriram, Shreedharan and Chen, Ronghua and Rohl, Carol A. and Johnson, Jason M. and Babak, Tomas},
+journal = {Genome Research},
+mendeley-groups = {.DRIMSeq paper},
+number = {6},
+pages = {1173--1183},
+title = {{A quantitative atlas of polyadenylation in five mammals}},
+volume = {22},
+year = {2012}
+}
+
+
+%%———————————————————————————————————
+% Alternative splicing
+%%———————————————————————————————————
+
+@article{Wang2007,
+abstract = {Human genes contain a dense array of diverse cis-acting elements that make up a code required for the expression of correctly spliced mRNAs. Alternative splicing generates a highly dynamic human proteome through networks of coordinated splicing events. Cis- and trans-acting mutations that disrupt the splicing code or the machinery required for splicing and its regulation have roles in various diseases, and recent studies have provided new insights into the mechanisms by which these effects occur. An unexpectedly large fraction of exonic mutations exhibit a primary pathogenic effect on splicing. Furthermore, normal genetic variation significantly contributes to disease severity and susceptibility by affecting splicing efficiency.},
+author = {Wang, Guey-Shin and Cooper, Thomas a},
+doi = {10.1038/nrg2164},
+isbn = {1471-0064},
+issn = {1471-0064},
+journal = {Nature reviews. Genetics},
+keywords = {Alternative Splicing,Exons,Gene Expression Regulation,Genetic Predisposition to Disease,Genetic Variation,Humans,Models, Biological,Mutation,RNA Splice Sites,RNA, Messenger,RNA, Messenger: metabolism},
+mendeley-groups = {.DRIMSeq paper},
+number = {10},
+pages = {749--61},
+pmid = {17726481},
+shorttitle = {Nat Rev Genet},
+title = {{Splicing in disease: disruption of the splicing code and the decoding machinery.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/17726481},
+volume = {8},
+year = {2007}
+}
+@misc{Tazi2009,
+abstract = {Almost all protein-coding genes are spliced and their majority is alternatively spliced. Alternative splicing is a key element in eukaryotic gene expression that increases the coding capacity of the human genome and an increasing number of examples illustrates that the selection of wrong splice sites causes human disease. A fine-tuned balance of factors regulates splice site selection. Here, we discuss well-studied examples that show how a disturbance of this balance can cause human disease. The rapidly emerging knowledge of splicing regulation now allows the development of treatment options. ?? 2008 Elsevier B.V. All rights reserved.},
+author = {Tazi, Jamal and Bakkour, Nadia and Stamm, Stefan},
+booktitle = {Biochimica et Biophysica Acta - Molecular Basis of Disease},
+keywords = {Alternative splicing,Disease,Mutation,Splicing code},
+mendeley-groups = {RNA-seq alternative splicing,.DRIMSeq paper},
+number = {1},
+pages = {14--26},
+title = {{Alternative splicing and disease}},
+volume = {1792},
+year = {2009}
+}
+
+
+%%———————————————————————————————————
+% edgeR
+%%———————————————————————————————————
+
+
+@article{McCarthy2012,
+abstract = {A flexible statistical framework is developed for the analysis of read counts from RNA-Seq gene expression studies. It provides the ability to analyse complex experiments involving multiple treatment conditions and blocking variables while still taking full account of biological variation. Biological variation between RNA samples is estimated separately from the technical variation associated with sequencing technologies. Novel empirical Bayes methods allow each gene to have its own specific variability, even when there are relatively few biological replicates from which to estimate such variability. The pipeline is implemented in the edgeR package of the Bioconductor project. A case study analysis of carcinoma data demonstrates the ability of generalized linear model methods (GLMs) to detect differential expression in a paired design, and even to detect tumour-specific expression changes. The case study demonstrates the need to allow for gene-specific variability, rather than assuming a common dispersion across genes or a fixed relationship between abundance and variability. Genewise dispersions de-prioritize genes with inconsistent results and allow the main analysis to focus on changes that are consistent between biological replicates. Parallel computational approaches are developed to make non-linear model fitting faster and more reliable, making the application of GLMs to genomic data more convenient and practical. Simulations demonstrate the ability of adjusted profile likelihood estimators to return accurate estimators of biological variability in complex situations. When variation is gene-specific, empirical Bayes estimators provide an advantageous compromise between the extremes of assuming common dispersion or separate genewise dispersion. The methods developed here can also be applied to count data arising from DNA-Seq applications, including ChIP-Seq for epigenetic marks and DNA methylation analyses.},
+author = {McCarthy, Davis J. and Chen, Yunshun and Smyth, Gordon K.},
+file = {:Users/gosia/Documents/Mendeley Desktop/McCarthy, Chen, Smyth/McCarthy, Chen, Smyth - 2012 - Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation.pdf:pdf},
+journal = {Nucleic Acids Research},
+keywords = {edgeR},
+mendeley-groups = {Project DM/edgeR,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {edgeR},
+number = {10},
+pages = {4288--4297},
+pmid = {22287627},
+title = {{Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation}},
+volume = {40},
+year = {2012}
+}
+
+
+@article{Robinson2010,
+abstract = {SUMMARY: It is expected that emerging digital gene expression (DGE) technologies will overtake microarray technologies in the near future for many functional genomics applications. One of the fundamental data analysis tasks, especially for gene expression studies, involves determining whether there is evidence that counts for a transcript or exon are significantly different across experimental conditions. edgeR is a Bioconductor software package for examining differential expression of replicated count data. An overdispersed Poisson model is used to account for both biological and technical variability. Empirical Bayes methods are used to moderate the degree of overdispersion across transcripts, improving the reliability of inference. The methodology can be used even with the most minimal levels of replication, provided at least one phenotype or experimental condition is replicated. The software may have other applications beyond sequencing data, such as proteome peptide count data. AVAILABILITY: The package is freely available under the LGPL licence from the Bioconductor web site (http://bioconductor.org).},
+author = {Robinson, Mark D and McCarthy, Davis J and Smyth, Gordon K},
+file = {:Users/gosia/Documents/Mendeley Desktop/Robinson, McCarthy, Smyth/Robinson, McCarthy, Smyth - 2010 - edgeR a Bioconductor package for differential expression analysis of digital gene expression data.pdf:pdf},
+institution = {Cancer Program, Garvan Institute of Medical Research, 384 Victoria Street, Darlinghurst, NSW 2010, Australia. mrobinson@wehi.edu.au},
+journal = {Bioinformatics (Oxford, England)},
+mendeley-groups = {RNA-seq DE/Gene DE,.DRIMSeq paper},
+number = {1},
+pages = {139--140},
+pmid = {19910308},
+title = {{edgeR: a Bioconductor package for differential expression analysis of digital gene expression data.}},
+volume = {26},
+year = {2010}
+}
+
+
+@article{Robinson2008,
+abstract = {We derive a quantile-adjusted conditional maximum likelihood estimator for the dispersion parameter of the negative binomial distribution and compare its performance, in terms of bias, to various other methods. Our estimation scheme outperforms all other methods in very small samples, typical of those from serial analysis of gene expression studies, the motivating data for this study. The impact of dispersion estimation on hypothesis testing is studied. We derive an "exact" test that outperforms the standard approximate asymptotic tests.},
+author = {Robinson, Mark D. and Smyth, Gordon K.},
+file = {:Users/gosia/Documents/Mendeley Desktop/Robinson, Smyth/Robinson, Smyth - 2008 - Small-sample estimation of negative binomial dispersion, with applications to SAGE data.pdf:pdf},
+journal = {Biostatistics},
+keywords = {Conditional likelihood,Dispersion,Negative binomial,Quantile adjustment,Serial analysis of gene expression,edgeR},
+mendeley-groups = {Project DM/edgeR,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {edgeR},
+number = {2},
+pages = {321--332},
+pmid = {17728317},
+title = {{Small-sample estimation of negative binomial dispersion, with applications to SAGE data}},
+volume = {9},
+year = {2008}
+}
+@article{Robinson2007,
+abstract = {MOTIVATION: Digital gene expression (DGE) technologies measure gene expression by counting sequence tags. They are sensitive technologies for measuring gene expression on a genomic scale, without the need for prior knowledge of the genome sequence. As the cost of sequencing DNA decreases, the number of DGE datasets is expected to grow dramatically. Various tests of differential expression have been proposed for replicated DGE data using binomial, Poisson, negative binomial or pseudo-likelihood (PL) models for the counts, but none of the these are usable when the number of replicates is very small. RESULTS: We develop tests using the negative binomial distribution to model overdispersion relative to the Poisson, and use conditional weighted likelihood to moderate the level of overdispersion across genes. Not only is our strategy applicable even with the smallest number of libraries, but it also proves to be more powerful than previous strategies when more libraries are available. The methodology is equally applicable to other counting technologies, such as proteomic spectral counts. AVAILABILITY: An R package can be accessed from http://bioinf.wehi.edu.au/resources/},
+author = {Robinson, Mark D. and Smyth, Gordon K.},
+file = {:Users/gosia/Documents/Mendeley Desktop/Robinson, Smyth/Robinson, Smyth - 2007 - Moderated statistical tests for assessing differences in tag abundance.pdf:pdf},
+journal = {Bioinformatics},
+keywords = {edgeR},
+mendeley-groups = {Project DM/edgeR,RNA-seq DE/Gene DE,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {edgeR},
+number = {21},
+pages = {2881--2887},
+pmid = {17881408},
+title = {{Moderated statistical tests for assessing differences in tag abundance}},
+volume = {23},
+year = {2007}
+}
+
+%%———————————————————————————————————
+% Other DE methods
+%%———————————————————————————————————
+
+@article{Anders2010,
+abstract = {High-throughput sequencing assays such as RNA-Seq, ChIP-Seq or barcode counting provide quantitative readouts in the form of count data. To infer differential signal in such data correctly and with good statistical power, estimation of data variability throughout the dynamic range and a suitable error model are required. We propose a method based on the negative binomial distribution, with variance and mean linked by local regression and present an implementation, DESeq, as an R/Bioconductor package.},
+author = {Anders, Simon and Huber, Wolfgang},
+journal = {Genome biology},
+keywords = {Animals,Binomial Distribution,Chromatin Immunoprecipitation,Chromatin Immunoprecipitation: methods,Computational Biology,Computational Biology: methods,DESeq,Drosophila,Drosophila: genetics,Gene Expression Profiling,Gene Expression Profiling: methods,Genetic,High-Throughput Nucleotide Sequencing,High-Throughput Nucleotide Sequencing: methods,Linear Models,Models,RNA,RNA: methods,Saccharomyces cerevisiae,Saccharomyces cerevisiae: genetics,Sequence Analysis,Stem Cells,Tissue Culture Techniques},
+mendeley-groups = {RNA-seq DE/Gene DE},
+mendeley-tags = {DESeq},
+number = {10},
+pages = {R106},
+publisher = {BioMed Central Ltd},
+title = {{Differential expression analysis for sequence count data.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3218662{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {11},
+year = {2010}
+}
+
+@article{Ritchie2015,
+abstract = {limma is an R/Bioconductor software package that provides an integrated solution for analysing data from gene expression experiments. It contains rich features for handling complex experimental designs and for information borrowing to overcome the problem of small sample sizes. Over the past decade, limma has been a popular choice for gene discovery through differential expression analyses of microarray and high-throughput PCR data. The package contains particularly strong facilities for reading, normalizing and exploring such data. Recently, the capabilities of limma have been significantly expanded in two important directions. First, the package can now perform both differential expression and differential splicing analyses of RNA sequencing (RNA-seq) data. All the downstream analysis tools previously restricted to microarray data are now available for RNA-seq as well. These capabilities allow users to analyse both RNA-seq and microarray data with very similar pipelines. Second, the package is now able to go past the traditional gene-wise expression analyses in a variety of ways, analysing expression profiles in terms of co-regulated sets of genes or in terms of higher-order expression signatures. This provides enhanced possibilities for biological interpretation of gene expression differences. This article reviews the philosophy and design of the limma package, summarizing both new and historical features, with an emphasis on recent enhancements and features that have not been previously described.},
+author = {Ritchie, Matthew E. and Phipson, Belinda and Wu, Di and Hu, Yifang and Law, Charity W. and Shi, Wei and Smyth, Gordon K.},
+journal = {Nucleic Acids Research},
+number = {7},
+pages = {e47},
+publisher = {Oxford University Press},
+title = {{Limma powers differential expression analyses for RNA-sequencing and microarray studies}},
+volume = {43},
+year = {2015}
+}
+
+
+
+@article{Law2014,
+abstract = {Normal linear modeling methods are developed for analyzing read counts from RNA-seq experiments. The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation, and then enters these into a limma empirical Bayes analysis pipeline. This opens access for RNA-seq analysts to a large body of methodology developed for microarrays. Simulation studies show that voom performs as well or better than count-based RNA-seq methods even when the data are generated according to the assumptions of the earlier methods. Two case studies illustrate the use of linear modeling and gene set testing methods.},
+author = {Law, Charity W and Chen, Yunshun and Shi, Wei and Smyth, Gordon K},
+file = {:Users/gosia/Documents/Mendeley Desktop/Law et al/Law et al. - 2014 - Voom precision weights unlock linear model analysis tools for RNA-seq read counts.pdf:pdf},
+issn = {1465-6914},
+journal = {Genome biology},
+keywords = {voom},
+mendeley-groups = {RNA-seq DE/Gene DE,.DRIMSeq paper},
+mendeley-tags = {voom},
+number = {2},
+pages = {R29},
+pmid = {24485249},
+title = {{Voom: precision weights unlock linear model analysis tools for RNA-seq read counts.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4053721{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {15},
+year = {2014}
+}
+
+
+
+%%———————————————————————————————————
+% Cox Reid 
+%%———————————————————————————————————
+
+@article{Cox1987,
+abstract = {We consider inference for a scalar parameter q/ in the presence of one or more nuisance parameters. The nuisance parameters are required to be orthogonal to the parameter of interest, and the construction and interpretation of orthogonalized parameters is discussed in some detail. For purposes of inference we propose a likelihood ratio statistic constructed from the conditional distribution of the observa- tions, given maximum likelihood estimates for the nuisance parameters. We consider to what extent this is preferable to the profile likelihood ratio statistic in which the likelihood function is maximized over the nuisance parameters. There are close connections to the modified profile likelihood of Barndorff-Nielsen (1983). The normal transformation model of Box and Cox (1964) is discussed as an illustratio},
+author = {Cox, D. R. and Reid, N.},
+doi = {10.2307/2345476},
+file = {:Users/gosia/Documents/Mendeley Desktop/Cox, Reid/Cox, Reid - 1987 - Parameter orthogonality and approximate conditional inference.pdf:pdf},
+issn = {0035-9246},
+journal = {Journal of the Royal Statistical Society. Series B (Methodological)},
+keywords = {Cox-Reid adjusted profile likelihood,asymptotic theory,conditional inference,likelihood ratio test,normal transformation model,nuisance parameters,orthogonal},
+mendeley-groups = {Project DM/Adjusted profile likelihood,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {Cox-Reid adjusted profile likelihood},
+number = {1},
+pages = {1--39},
+pmid = {124},
+title = {{Parameter orthogonality and approximate conditional inference}},
+url = {http://yaroslavvb.com/papers/cox-parameter.pdf},
+volume = {49},
+year = {1987}
+}
+
+@article{McCullagh1990,
+abstract = {We propose a simple adjustment for profile likelihoods. The aim of the adjustment is to alleviate some of the problems inherent in the use of profile likelihoods, such as bias, inconsistency and overoptimistic variance estimates. The adjustment is applied to the profile log-likelihood score function at each parameter value so that its mean is zero and its variance is the negative expected derivative matrix of the adjusted score function. For cases in which explicit calculation of the adjustments is difficult, we give two methods to simplify their computation: an `automatic' simulation method that requires as input only the profile log-likelihood and its first few derivatives; first-order asymptotic expressions. Some examples are provided and a comparison is made with the conditional profile log-likelihood of Cox and Reid.},
+author = {McCullagh, Peter and Tibshirani, Robert},
+file = {:Users/gosia/Documents/Mendeley Desktop/McCullagh, Tibshirani/McCullagh, Tibshirani - 1990 - A Simple Method for the Adjustment of Profile Likelihoods.pdf:pdf},
+issn = {0035-9246},
+journal = {Journal of the Royal Statistical Society. Series B (Methodological)},
+keywords = {Adjusted profile likelihood},
+mendeley-groups = {Project DM/Adjusted profile likelihood},
+mendeley-tags = {Adjusted profile likelihood},
+number = {2},
+pages = {325--344},
+title = {{A Simple Method for the Adjustment of Profile Likelihoods}},
+url = {http://www.jstor.org/stable/2345439$\backslash$nhttp://www.jstor.org/stable/pdfplus/2345439.pdf?acceptTC=true},
+volume = {52},
+year = {1990}
+}
+
+@article{Reid2003,
+abstract = {We describe some recent approaches to likelihood based inference in the presence of nuisance parameters. Our approach is based on plotting the likelihood function and the {\$}p{\$}-value function, using recently developed third order approximations. Orthogonal parameters and adjustments to profile likelihood are also discussed. Connections to classical approaches of conditional and marginal inference are outlined.},
+archivePrefix = {arXiv},
+arxivId = {physics/0312079},
+author = {Reid, N. and Fraser, D. A. S.},
+eprint = {0312079},
+file = {:Users/gosia/Dropbox/my{\_}documents/Mendeley Desktop/Reid, Fraser/Reid, Fraser - 2003 - Likelihood inference in the presence of nuisance parameters(2).pdf:pdf},
+mendeley-groups = {.DRIMSeq paper},
+month = {dec},
+pages = {7},
+primaryClass = {physics},
+title = {{Likelihood inference in the presence of nuisance parameters}},
+url = {http://arxiv.org/abs/physics/0312079},
+year = {2003}
+}
+
+%%———————————————————————————————————
+% Counting 
+%%———————————————————————————————————
+
+@article{Soneson2016,
+abstract = {RNA-seq has been a boon to the quantitative analysis of transcriptomes. A notable application is the detection of changes in transcript usage between experimental conditions. For example, discovery of pathological alternative splicing may allow the development of new treatments or better management of patients. From an analysis perspective, there are several ways to approach RNA-seq data to unravel differential transcript usage, such as annotation-based exon-level counting, differential analysis of the percentage spliced in, or quantitative analysis of assembled transcripts. The goal of this research is to compare and contrast current state-of-the-art methods, and to suggest improvements to commonly used work flows.},
+author = {Soneson, Charlotte and Matthes, Katarina L and Nowicka, Malgorzata and Law, Charity W and Robinson, Mark D},
+doi = {10.1186/s13059-015-0862-3},
+file = {:Users/gosia/Documents/Mendeley Desktop/Soneson et al/Soneson et al. - 2016 - Isoform prefiltering improves performance of count-based methods for analysis of differential transcript usage.pdf:pdf},
+issn = {1474-760X},
+journal = {Genome Biology},
+mendeley-groups = {RNA-seq simulations,.DRIMSeq paper},
+number = {1},
+pages = {1--15},
+title = {{Isoform prefiltering improves performance of count-based methods for analysis of differential transcript usage}},
+url = {http://dx.doi.org/10.1186/s13059-015-0862-3},
+volume = {17},
+year = {2016}
+}
+
+@article{Liao2014,
+abstract = {Motivation: Next-generation sequencing technologies generate millions of short sequence reads, which are usually aligned to a reference genome. In many applications, the key information required for downstream analysis is the number of reads mapping to each genomic feature, for example to each exon or each gene. The process of counting reads is called read summarization. Read summarization is required for a great variety of genomic analyses but has so far received relatively little attention in the literature.$\backslash$nResults: We present featureCounts, a read summarization program suitable for counting reads generated from either RNA or genomic DNA sequencing experiments. featureCounts implements highly efficient chromosome hashing and feature blocking techniques. It is considerably faster than existing methods (by an order of magnitude for gene-level summarization) and requires far less computer memory. It works with either single or paired-end reads and provides a wide range of options appropriate for different sequencing applications.$\backslash$nAvailability and implementation: featureCounts is available under GNU General Public License as part of the Subread (http://subread.sourceforge.net) or Rsubread (http://www.bioconductor.org) software packages.$\backslash$nContact: shi@wehi.edu.au},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1305.3347v2},
+author = {Liao, Yang and Smyth, Gordon K. and Shi, Wei},
+eprint = {arXiv:1305.3347v2},
+journal = {Bioinformatics},
+keywords = {featureCounts},
+mendeley-groups = {RNA-seq quantification/Exon quantification,.DRIMSeq paper},
+mendeley-tags = {featureCounts},
+number = {7},
+pages = {923--930},
+pmid = {24227677},
+publisher = {Oxford University Press},
+title = {{FeatureCounts: An efficient general purpose program for assigning sequence reads to genomic features}},
+volume = {30},
+year = {2014}
+}
+
+
+@article{Anders2015,
+abstract = {MOTIVATION: A large choice of tools exists for many standard tasks in the analysis of high-throughput sequencing (HTS) data. However, once a project deviates from standard work flows, custom scripts are needed.$\backslash$n$\backslash$nRESULTS: We present HTSeq, a Python library to facilitate the rapid development of such scripts. HTSeq offers parsers for many common data formats in HTS projects, as well as classes to represent data such as genomic coordinates, sequences, sequencing reads, alignments, gene model information, variant calls, and provides data structures that allow for querying via genomic coordinates. We also present htseq-count, a tool developed with HTSeq that preprocesses RNA-Seq data for differential expression analysis by counting the overlap of reads with genes. Availability: HTSeq is released as open-source software under the GNU General Public Licence and available from http://www-huber.embl.de/HTSeq or from the Python Package Index https://pypi.python.org/pypi/HTSeq.$\backslash$n$\backslash$nCONTACT: sanders@fs.tum.de.},
+author = {Anders, Simon and Pyl, Paul Theodor and Huber, Wolfgang},
+journal = {Bioinformatics},
+mendeley-groups = {.DRIMSeq paper,RNA-seq quantification},
+number = {2},
+pages = {166--169},
+publisher = {Oxford University Press},
+title = {{HTSeq-A Python framework to work with high-throughput sequencing data}},
+volume = {31},
+year = {2015}
+}
+
+
+@article{Hu2014,
+abstract = {Correctly estimating isoform-specific gene expression is important for understanding complicated biological mechanisms and for mapping disease susceptibility genes. However, estimating isoform-specific gene expression is challenging because various biases present in RNA-Seq (RNA sequencing) data complicate the analysis, and if not appropriately corrected, can affect isoform expression estimation and downstream analysis. In this article, we present PennSeq, a statistical method that allows each isoform to have its own non-uniform read distribution. Instead of making parametric assumptions, we give adequate weight to the underlying data by the use of a non-parametric approach. Our rationale is that regardless what factors lead to non-uniformity, whether it is due to hexamer priming bias, local sequence bias, positional bias, RNA degradation, mapping bias or other unknown reasons, the probability that a fragment is sampled from a particular region will be reflected in the aligned data. This empirical approach thus maximally reflects the true underlying non-uniform read distribution. We evaluate the performance of PennSeq using both simulated data with known ground truth, and using two real Illumina RNA-Seq data sets including one with quantitative real time polymerase chain reaction measurements. Our results indicate superior performance of PennSeq over existing methods, particularly for isoforms demonstrating severe non-uniformity. PennSeq is freely available for download at http://sourceforge.net/projects/pennseq.},
+author = {Hu, Yu and Liu, Yichuan and Mao, Xianyun and Jia, Cheng and Ferguson, Jane F. and Xue, Chenyi and Reilly, Muredach P. and Li, Hongzhe and Li, Mingyao},
+journal = {Nucleic Acids Research},
+mendeley-groups = {RNA-seq quantification,.DRIMSeq paper},
+number = {3},
+title = {{PennSeq: Accurate isoform-specific gene expression quantification in RNA-Seq by modeling non-uniform read distribution}},
+volume = {42},
+year = {2014}
+}
+
+
+@article{Alamancos2015,
+abstract = {Alternative splicing plays an essential role in many cellular processes and bears major relevance in the understanding of multiple diseases, including cancer. High-throughput RNA sequencing allows genome-wide analyses of splicing across multiple conditions. However, the increasing number of available data sets represents a major challenge in terms of computation time and storage requirements. We describe SUPPA, a computational tool to calculate relative inclusion values of alternative splicing events, exploiting fast transcript quantification. SUPPA accuracy is comparable and sometimes superior to standard methods using simulated as well as real RNA-sequencing data compared with experimentally validated events. We assess the variability in terms of the choice of annotation and provide evidence that using complete transcripts rather than more transcripts per gene provides better estimates. Moreover, SUPPA coupled with de novo transcript reconstruction methods does not achieve accuracies as high as using quantification of known transcripts, but remains comparable to existing methods. Finally, we show that SUPPA is more than 1000 times faster than standard methods. Coupled with fast transcript quantification, SUPPA provides inclusion values at a much higher speed than existing methods without compromising accuracy, thereby facilitating the systematic splicing analysis of large data sets with limited computational resources. The software is implemented in Python 2.7 and is available under the MIT license at https://bitbucket.org/regulatorygenomicsupf/suppa.},
+author = {Alamancos, Gael P and Pages, Amadis and Trincado, Juan L and Bellora, Nicolas and Eyras, Eduardo},
+doi = {10.1261/rna.051557.115},
+file = {:Users/gosia/Documents/Mendeley Desktop/Alamancos et al/Alamancos et al. - 2015 - Leveraging transcript quantification for fast computation of alternative splicing profiles.pdf:pdf},
+issn = {1469-9001 (Electronic)},
+journal = {RNA (New York, N.Y.)},
+keywords = {Alternative Splicing,Animals,Computational Biology,Computer Simulation,Gene Expression Profiling,Humans,RNA,Sequence Analysis,Software,metabolism,methods},
+language = {eng},
+mendeley-groups = {RNA-seq quantification,.DRIMSeq paper},
+month = {sep},
+number = {9},
+pages = {1521--1531},
+pmid = {26179515},
+title = {{Leveraging transcript quantification for fast computation of alternative splicing profiles.}},
+volume = {21},
+year = {2015}
+}
+
+
+%%———————————————————————————————————
+% Transcript quantification
+%%———————————————————————————————————
+
+@article{Teng2016,
+abstract = {Obtaining RNA-seq measurements involves a complex data analytical process with a large number of competing algorithms as options. There is much debate about which of these methods provides the best approach. Unfortunately, it is currently difficult to evaluate their performance due in part to a lack of sensitive assessment metrics. We present a series of statistical summaries and plots to evaluate the performance in terms of specificity and sensitivity, available as a R/Bioconductor package ( http://bioconductor.org/packages/rnaseqcomp ). Using two independent datasets, we assessed seven competing pipelines. Performance was generally poor, with two methods clearly underperforming and RSEM slightly outperforming the rest.},
+author = {Teng, Mingxiang and Love, Michael I and Davis, Carrie A and Djebali, Sarah and Dobin, Alexander and Graveley, Brenton R and Li, Sheng and Mason, Christopher E and Olson, Sara and Pervouchine, Dmitri and Sloan, Cricket A and Wei, Xintao and Zhan, Lijun and Irizarry, Rafael A},
+doi = {10.1186/s13059-016-0940-1},
+file = {:Users/gosia/Dropbox/my{\_}documents/Mendeley Desktop/Teng et al/Teng et al. - 2016 - A benchmark for RNA-seq quantification pipelines.pdf:pdf},
+issn = {1474-760X},
+journal = {Genome Biology},
+mendeley-groups = {RNA-seq quantification,RNA-seq quantification/Transcript quantification,.DRIMSeq paper},
+number = {1},
+pages = {1--12},
+title = {{A benchmark for RNA-seq quantification pipelines}},
+url = {http://dx.doi.org/10.1186/s13059-016-0940-1},
+volume = {17},
+year = {2016}
+}
+
+
+@article{Kanitz2015,
+abstract = {Understanding the regulation of gene expression, including transcription start site usage, alternative splicing, and polyadenylation, requires accurate quantification of expression levels down to the level of individual transcript isoforms. To comparatively evaluate the accuracy of the many methods that have been proposed for estimating transcript isoform abundance from RNA sequencing data, we have used both synthetic data as well as an independent experimental method for quantifying the abundance of transcript ends at the genome-wide level.},
+author = {Kanitz, Alexander and Gypas, Foivos and Gruber, Andreas J and Gruber, Andreas R and Martin, Georges and Zavolan, Mihaela},
+doi = {10.1186/s13059-015-0702-5},
+file = {:Users/gosia/Dropbox/my{\_}documents/Mendeley Desktop/Kanitz et al/Kanitz et al. - 2015 - Comparative assessment of methods for the computational inference of transcript isoform abundance from RNA-seq da.pdf:pdf},
+issn = {1465-6906},
+journal = {Genome Biology},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,.DRIMSeq paper},
+number = {1},
+pages = {1--26},
+title = {{Comparative assessment of methods for the computational inference of transcript isoform abundance from RNA-seq data}},
+url = {http://dx.doi.org/10.1186/s13059-015-0702-5},
+volume = {16},
+year = {2015}
+}
+
+
+
+
+@article{Trapnell2010,
+abstract = {High-throughput mRNA sequencing (RNA-Seq) promises simultaneous transcript discovery and abundance estimation. However, this would require algorithms that are not restricted by prior gene annotations and that account for alternative transcription and splicing. Here we introduce such algorithms in an open-source software program called Cufflinks. To test Cufflinks, we sequenced and analyzed {\textgreater}430 million paired 75-bp RNA-Seq reads from a mouse myoblast cell line over a differentiation time series. We detected 13,692 known transcripts and 3,724 previously unannotated ones, 62{\%} of which are supported by independent expression data or by homologous genes in other species. Over the time series, 330 genes showed complete switches in the dominant transcription start site (TSS) or splice isoform, and we observed more subtle shifts in 1,304 other genes. These results suggest that Cufflinks can illuminate the substantial regulatory flexibility and complexity in even this well-studied model of muscle development and that it can improve transcriptome-based genome annotation.},
+author = {Trapnell, Cole and Williams, Brian a and Pertea, Geo and Mortazavi, Ali and Kwan, Gordon and van Baren, Marijke J and Salzberg, Steven L and Wold, Barbara J and Pachter, Lior},
+journal = {Nature biotechnology},
+keywords = {cufflinks},
+mendeley-groups = {.DRIMSeq paper,RNA-seq quantification/Transcript quantification},
+mendeley-tags = {cufflinks},
+number = {5},
+pages = {511--515},
+publisher = {Nature Publishing Group},
+title = {{Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation.}},
+url = {http://dx.doi.org/10.1038/nbt.1621},
+volume = {28},
+year = {2010}
+}
+
+
+
+@article{Bernard2014,
+abstract = {MOTIVATION: Several state-of-the-art methods for isoform identification and quantification are based on [Formula: see text]-regularized regression, such as the Lasso. However, explicitly listing the-possibly exponentially-large set of candidate transcripts is intractable for genes with many exons. For this reason, existing approaches using the [Formula: see text]-penalty are either restricted to genes with few exons or only run the regression algorithm on a small set of preselected isoforms. RESULTS: We introduce a new technique called FlipFlop, which can efficiently tackle the sparse estimation problem on the full set of candidate isoforms by using network flow optimization. Our technique removes the need of a preselection step, leading to better isoform identification while keeping a low computational cost. Experiments with synthetic and real RNA-Seq data confirm that our approach is more accurate than alternative methods and one of the fastest available. Availability and implementation: Source code is freely available as an R package from the Bioconductor Web site (http://www.bioconductor.org/), and more information is available at http://cbio.ensmp.fr/flipflop. CONTACT: Jean-Philippe.Vert@mines.org Supplementary information: Supplementary data are available at Bioinformatics online.},
+author = {Bernard, Elsa and Jacob, Laurent and Mairal, Julien and Vert, Jean-Philippe},
+journal = {Bioinformatics (Oxford, England)},
+keywords = {flipflop},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {flipflop},
+pages = {1--9},
+title = {{Efficient RNA isoform identification and quantification from RNA-Seq data with network flows.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/24813214},
+year = {2014}
+}
+@article{Rossell2014,
+abstract = {RNA-sequencing has revolutionized biomedical research and, in particular, our ability to study gene alternative splicing. The problem has important implications for human health, as alternative splicing may be involved in malfunctions at the cellular level and multiple diseases. However, the high-dimensional nature of the data and the existence of experimental biases pose serious data analysis challenges. We find that the standard data summaries used to study alternative splicing are severely limited, as they ignore a substantial amount of valuable information. Current data analysis methods are based on such summaries and are hence sub-optimal. Further, they have limited flexibility in accounting for technical biases. We propose novel data summaries and a Bayesian modeling framework that overcome these limitations and determine biases in a non-parametric, highly flexible manner. These summaries adapt naturally to the rapid improvements in sequencing technology. We provide efficient point estimates and uncertainty assessments. The approach allows to study alternative splicing patterns for individual samples and can also be the basis for downstream analyses. We found a several fold improvement in estimation mean square error compared popular approaches in simulations, and substantially higher consistency between replicates in experimental data. Our findings indicate the need for adjusting the routine summarization and analysis of alternative splicing RNA-seq studies. We provide a software implementation in the R package casper.},
+author = {Rossell, David and {Stephan-Otto Attolini}, Camille and Kroiss, Manuel and St{\"{o}}cker, Almond},
+journal = {The annals of applied statistics},
+keywords = {casper},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {casper},
+number = {1},
+pages = {309--330},
+title = {{Quantifying Alternative Splicing From Paired-End Rna-Sequencing Data.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/24795787},
+volume = {8},
+year = {2014}
+}
+
+@article{Li2011,
+abstract = {BACKGROUND: RNA-Seq is revolutionizing the way transcript abundances are measured. A key challenge in transcript quantification from RNA-Seq data is the handling of reads that map to multiple genes or isoforms. This issue is particularly important for quantification with de novo transcriptome assemblies in the absence of sequenced genomes, as it is difficult to determine which transcripts are isoforms of the same gene. A second significant issue is the design of RNA-Seq experiments, in terms of the number of reads, read length, and whether reads come from one or both ends of cDNA fragments. RESULTS: We present RSEM, an user-friendly software package for quantifying gene and isoform abundances from single-end or paired-end RNA-Seq data. RSEM outputs abundance estimates, 95{\%} credibility intervals, and visualization files and can also simulate RNA-Seq data. In contrast to other existing tools, the software does not require a reference genome. Thus, in combination with a de novo transcriptome assembler, RSEM enables accurate transcript quantification for species without sequenced genomes. On simulated and real data sets, RSEM has superior or comparable performance to quantification methods that rely on a reference genome. Taking advantage of RSEM's ability to effectively use ambiguously-mapping reads, we show that accurate gene-level abundance estimates are best obtained with large numbers of short single-end reads. On the other hand, estimates of the relative frequencies of isoforms within single genes may be improved through the use of paired-end reads, depending on the number of possible splice forms for each gene. CONCLUSIONS: RSEM is an accurate and user-friendly software tool for quantifying transcript abundances from RNA-Seq data. As it does not rely on the existence of a reference genome, it is particularly useful for quantification with de novo transcriptome assemblies. In addition, RSEM has enabled valuable guidance for cost-efficient design of quantification experiments with RNA-Seq, which is currently relatively expensive.},
+author = {Li, Bo and Dewey, Colin N},
+doi = {10.1186/1471-2105-12-323},
+file = {:Users/gosia/Documents/Mendeley Desktop/Li, Dewey/Li, Dewey - 2011 - RSEM accurate transcript quantification from RNA-Seq data with or without a reference genome.pdf:pdf},
+issn = {1471-2105},
+journal = {BMC bioinformatics},
+keywords = {Animals,Computer Simulation,Gene Expression Profiling,Gene Expression Profiling: methods,Humans,Mice,Protein Isoforms,Protein Isoforms: genetics,RNA,RNA: genetics,RNA: methods,RSEM,Sequence Analysis,Software},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,RNA-seq simulations,.CM2 PhD report,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {RSEM},
+month = {jan},
+pages = {323},
+pmid = {21816040},
+title = {{RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3163565{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {12},
+year = {2011}
+}
+@article{Glaus2012,
+abstract = {Motivation: High-throughput sequencing enables expression analysis at the level of individual transcripts. The analysis of transcriptome expression levels and differential expression estimation requires a probabilistic approach to properly account for ambiguity caused by shared exons and finite read sampling as well as the intrinsic biological variance of transcript expression. Results: We present BitSeq (Bayesian Inference of Transcripts from Sequencing data), a Bayesian approach for estimation of transcript expression level from RNA-seq experiments. Inferred relative expression is represented by Markov chain Monte Carlo (MCMC) samples from the posterior probability distribution of a generative model of the read data. We propose a novel method for differential expression analysis across replicates which propagates uncertainty from the sample-level model while modelling biological variance using an expression-level-dependent prior. We demonstrate the advantages of our method using simulated data as well as an RNA-seq dataset with technical and biological replication for both studied conditions. Availability: The implementation of the transcriptome expression estimation and differential expression analysis, BitSeq, have been written in C++ and Python.},
+author = {Glaus, Peter and Honkela, Antti and Rattray, Magnus},
+file = {:Users/gosia/Documents/Mendeley Desktop/Glaus, Honkela, Rattray/Glaus, Honkela, Rattray - 2012 - Identifying differentially expressed transcripts from RNA-seq data with biological variation.pdf:pdf},
+journal = {Bioinformatics},
+keywords = {BitSeq},
+mendeley-groups = {RNA-seq DE/Transcript DE,RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {BitSeq},
+number = {13},
+pages = {1721--1728},
+title = {{Identifying differentially expressed transcripts from RNA-seq data with biological variation}},
+volume = {28},
+year = {2012}
+}
+
+
+@article{Patro2014,
+abstract = {We introduce Sailfish, a computational method for quantifying the abundance of previously annotated RNA isoforms from RNA-seq data. Because Sailfish entirely avoids mapping reads, a time-consuming step in all current methods, it provides quantification estimates much faster than do existing approaches (typically 20 times faster) without loss of accuracy. By facilitating frequent reanalysis of data and reducing the need to optimize parameters, Sailfish exemplifies the potential of lightweight algorithms for efficiently processing sequencing reads.},
+author = {Patro, Rob and Mount, Stephen M and Kingsford, Carl},
+journal = {Nature biotechnology},
+keywords = {sailfish},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {sailfish},
+number = {5},
+pages = {462--4},
+publisher = {Nature Publishing Group},
+title = {{Sailfish enables alignment-free isoform quantification from RNA-seq reads using lightweight algorithms.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/24752080},
+volume = {32},
+year = {2014}
+}
+@article{Bray2016,
+abstract = {We present kallisto, an RNA-seq quantification program that is two orders of magnitude faster than previous approaches and achieves similar accuracy. Kallisto pseudoaligns reads to a reference, producing a list of transcripts that are compatible with each read while avoiding alignment of individual bases. We use kallisto to analyze 30 million unaligned paired-end RNA-seq reads in {\textless}10 min on a standard laptop computer. This removes a major computational bottleneck in RNA-seq analysis.},
+author = {Bray, Nicolas L and Pimentel, Harold and Melsted, Pall and Pachter, Lior},
+issn = {1546-1696},
+journal = {Nat Biotech},
+keywords = {kallisto},
+mendeley-groups = {RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+mendeley-tags = {kallisto},
+month = {apr},
+publisher = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+title = {{Near-optimal probabilistic RNA-seq quantification}},
+url = {http://dx.doi.org/10.1038/nbt.3519 http://10.1038/nbt.3519 http://www.nature.com/nbt/journal/vaop/ncurrent/abs/nbt.3519.html{\#}supplementary-information},
+volume = {advance on},
+year = {2016}
+}
+@article{Patro2015,
+abstract = {Transcript quantification is a central task in the analysis of RNA-seq data. Accurate computational methods for the quantification of transcript abundances are essential for downstream analysis. However, most existing approaches are much slower than is necessary for their degree of accuracy. We introduce Salmon, a novel method and software tool for transcript quantification that exhibits state-of-the-art accuracy while being significantly faster than most other tools. Salmon achieves this through the combined application of a two-phase inference procedure, a reduced data representation, and a novel lightweight read alignment algorithm. Salmon is written in C++11, and is available under the GPL v3 license as open-source software at https://combine-lab.github.io/salmon.},
+author = {Patro, Rob and Duggal, Geet and Kingsford, Carl},
+doi = {10.1101/021592},
+file = {:Users/gosia/Documents/Mendeley Desktop/Patro, Duggal, Kingsford/Patro, Duggal, Kingsford - 2015 - Salmon Accurate, Versatile and Ultrafast Quantification from RNA-seq Data using Lightweight-Alignment.pdf:pdf},
+journal = {bioRxiv},
+mendeley-groups = {RNA-seq quantification,RNA-seq quantification/Transcript quantification,.DRIMSeq paper/Transcrip quantification},
+pages = {021592},
+title = {{Salmon: Accurate, Versatile and Ultrafast Quantification from RNA-seq Data using Lightweight-Alignment}},
+url = {http://biorxiv.org/content/early/2015/06/27/021592.abstract},
+year = {2015}
+}
+
+
+
+
+
+
+
+%%———————————————————————————————————
+% DS Methods
+%%———————————————————————————————————
+
+@article{Anders2012,
+abstract = {RNA-seq is a powerful tool for the study of alternative splicing and other forms of alternative isoform expression. Understanding the regulation of these processes requires sensitive and specific detection of differential isoform abundance in comparisons between conditions, cell types, or tissues. We present DEXSeq, a statistical method to test for differential exon usage in RNA-seq data. DEXSeq uses generalized linear models and offers reliable control of false discoveries by taking biological variation into account. DEXSeq detects with high sensitivity genes, and in many cases exons, that are subject to differential exon usage. We demonstrate the versatility of DEXSeq by applying it to several data sets. The method facilitates the study of regulation and function of alternative exon usage on a genome-wide scale. An implementation of DEXSeq is available as an R/Bioconductor package.},
+author = {Anders, S. and Reyes, A. and Huber, W.},
+doi = {10.1101/gr.133744.111},
+file = {:Users/gosia/Documents/Mendeley Desktop/Anders, Reyes, Huber/Anders, Reyes, Huber - 2012 - Detecting differential usage of exons from RNA-seq data.pdf:pdf},
+isbn = {1088905115495469},
+issn = {1088-9051},
+journal = {Genome Research},
+keywords = {DEXSeq},
+mendeley-groups = {RNA-seq DE/Differential splicing,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {DEXSeq},
+number = {10},
+pages = {2008--2017},
+pmid = {22722343},
+title = {{Detecting differential usage of exons from RNA-seq data}},
+volume = {22},
+year = {2012}
+}
+
+@article{Trapnell2013,
+abstract = {Differential analysis of gene and transcript expression using high-throughput RNA sequencing (RNA-seq) is complicated by several sources of measurement variability and poses numerous statistical challenges. We present Cuffdiff 2, an algorithm that estimates expression at transcript-level resolution and controls for variability evident across replicate libraries. Cuffdiff 2 robustly identifies differentially expressed transcripts and genes and reveals differential splicing and promoter-preference changes. We demonstrate the accuracy of our approach through differential analysis of lung fibroblasts in response to loss of the developmental transcription factor HOXA1, which we show is required for lung fibroblast and HeLa cell cycle progression. Loss of HOXA1 results in significant expression level changes in thousands of individual transcripts, along with isoform switching events in key regulators of the cell cycle. Cuffdiff 2 performs robust differential analysis in RNA-seq experiments at transcript resolution, revealing a layer of regulation not readily observable with other high-throughput technologies.},
+author = {Trapnell, Cole and Hendrickson, David G and Sauvageau, Martin and Goff, Loyal and Rinn, John L and Pachter, Lior},
+journal = {Nature biotechnology},
+keywords = {Fibroblasts,Fibroblasts: cytology,Gene Expression Regulation,HeLa Cells,Homeodomain Proteins,Homeodomain Proteins: genetics,Humans,Lung,Lung: cytology,Lung: metabolism,Messenger,Messenger: genetics,RNA,RNA: methods,Sequence Analysis,Transcription Factors,Transcription Factors: genetics,cuffdiff},
+mendeley-groups = {RNA-seq DE/Differential splicing,.DRIMSeq paper},
+mendeley-tags = {cuffdiff},
+number = {1},
+pages = {46--53},
+publisher = {Nature Publishing Group},
+title = {{Differential analysis of gene regulation at transcript resolution with RNA-seq.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3869392{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {31},
+year = {2013}
+}
+
+@article{Hooper2014,
+abstract = {Alternative splicing is a major contributor to cellular diversity. Therefore the identification and quantification of differentially spliced transcripts in genome-wide transcript analysis is an important consideration. Here, I review the software available for analysis of RNA-Seq data for differential splicing and discuss intrinsic challenges for differential splicing analyses. Three approaches to differential splicing analysis are described, along with their associated software implementations, their strengths, limitations, and caveats. Suggestions for future work include more extensive experimental validation to assess accuracy of the software predictions and consensus formats for outputs that would facilitate visualizations, data exchange, and downstream analyses.},
+author = {Hooper, Joan E},
+file = {:Users/gosia/Documents/Mendeley Desktop/Hooper/Hooper - 2014 - A survey of software for genome-wide discovery of differential splicing in RNA-Seq data(2).pdf:pdf},
+journal = {Human genomics},
+keywords = {alternative splicing,analysis and why is,differential splicing,it,rna-seq,software,splicing analysis,what is differential splicing},
+mendeley-groups = {RNA-seq DE/Differential splicing},
+pages = {3},
+title = {{A survey of software for genome-wide discovery of differential splicing in RNA-Seq data.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3903050{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {8},
+year = {2014}
+}
+@article{Alamancos2014,
+abstract = {The development of novel high-throughput sequencing (HTS) methods for RNA (RNA-Seq) has provided a very powerful mean to study splicing under multiple conditions at unprecedented depth. However, the complexity of the information to be analyzed has turned this into a challenging task. In the last few years, a plethora of tools have been developed, allowing researchers to process RNA-Seq data to study the expression of isoforms and splicing events, and their relative changes under different conditions. We provide an overview of the methods available to study splicing from short RNA-Seq data, which could serve as an entry point for users who need to decide on a suitable tool for a specific analysis. We also attempt to propose a classification of the tools according to the operations they do, to facilitate the comparison and choice of methods.},
+archivePrefix = {arXiv},
+arxivId = {1304.5952},
+author = {Alamancos, Gael P. and Agirre, Eneritz and Eyras, Eduardo},
+eprint = {1304.5952},
+file = {:Users/gosia/Documents/Mendeley Desktop/Alamancos, Agirre, Eyras/Alamancos, Agirre, Eyras - 2014 - Methods to study splicing from high-throughput RNA sequencing data.pdf:pdf},
+journal = {Methods in Molecular Biology},
+keywords = {Alternative splicing,Isoform,Quantification,RNA-Seq,Reconstruction,Splicing},
+mendeley-groups = {RNA-seq DE,RNA-seq DE/Differential splicing},
+pages = {357--397},
+pmid = {24549677},
+publisher = {Humana Press Inc.},
+title = {{Methods to study splicing from high-throughput RNA sequencing data}},
+volume = {1126},
+year = {2014}
+}
+
+@article{Shen2014,
+abstract = {Ultra-deep RNA sequencing (RNA-Seq) has become a powerful approach for genome-wide analysis of pre-mRNA alternative splicing. We previously developed multivariate analysis of transcript splicing (MATS), a statistical method for detecting differential alternative splicing between two RNA-Seq samples. Here we describe a new statistical model and computer program, replicate MATS (rMATS), designed for detection of differential alternative splicing from replicate RNA-Seq data. rMATS uses a hierarchical model to simultaneously account for sampling uncertainty in individual replicates and variability among replicates. In addition to the analysis of unpaired replicates, rMATS also includes a model specifically designed for paired replicates between sample groups. The hypothesis-testing framework of rMATS is flexible and can assess the statistical significance over any user-defined magnitude of splicing change. The performance of rMATS is evaluated by the analysis of simulated and real RNA-Seq data. rMATS outperformed two existing methods for replicate RNA-Seq data in all simulation settings, and RT-PCR yielded a high validation rate (94{\%}) in an RNA-Seq dataset of prostate cancer cell lines. Our data also provide guiding principles for designing RNA-Seq studies of alternative splicing. We demonstrate that it is essential to incorporate biological replicates in the study design. Of note, pooling RNAs or merging RNA-Seq data from multiple replicates is not an effective approach to account for variability, and the result is particularly sensitive to outliers. The rMATS source code is freely available at rnaseq-mats.sourceforge.net/. As the popularity of RNA-Seq continues to grow, we expect rMATS will be useful for studies of alternative splicing in diverse RNA-Seq projects.},
+author = {Shen, Shihao and Park, Juw Won and Lu, Zhi-xiang and Lin, Lan and Henry, Michael D and Wu, Ying Nian and Zhou, Qing and Xing, Yi},
+file = {:Users/gosia/Documents/Mendeley Desktop/Shen et al/Shen et al. - 2014 - rMATS robust and flexible detection of differential alternative splicing from replicate RNA-Seq data.pdf:pdf},
+journal = {Proceedings of the National Academy of Sciences of the United States of America},
+keywords = {Alternative Splicing,Cell Line,Computer Simulation,High-Throughput Nucleotide Sequencing,High-Throughput Nucleotide Sequencing: methods,Humans,Male,Prostatic Neoplasms,Prostatic Neoplasms: genetics,Prostatic Neoplasms: pathology,RNA,RNA: genetics,Tumor},
+mendeley-groups = {RNA-seq DE/Differential splicing,.DRIMSeq paper},
+number = {51},
+pages = {E5593--601},
+title = {{rMATS: robust and flexible detection of differential alternative splicing from replicate RNA-Seq data.}},
+url = {http://www.pnas.org/content/111/51/E5593.long},
+volume = {111},
+year = {2014}
+}
+@article{Katz2010,
+abstract = {Through alternative splicing, most human genes express multiple isoforms that often differ in function. To infer isoform regulation from high-throughput sequencing of cDNA fragments (RNA-seq), we developed the mixture-of-isoforms (MISO) model, a statistical model that estimates expression of alternatively spliced exons and isoforms and assesses confidence in these estimates. Incorporation of mRNA fragment length distribution in paired-end RNA-seq greatly improved estimation of alternative-splicing levels. MISO also detects differentially regulated exons or isoforms. Application of MISO implicated the RNA splicing factor hnRNP H1 in the regulation of alternative cleavage and polyadenylation, a role that was supported by UV cross-linking-immunoprecipitation sequencing (CLIP-seq) analysis in human cells. Our results provide a probabilistic framework for RNA-seq analysis, give functional insights into pre-mRNA processing and yield guidelines for the optimal design of RNA-seq experiments for studies of gene and isoform expression.},
+author = {Katz, Yarden and Wang, Eric T and Airoldi, Edoardo M and Burge, Christopher B},
+journal = {Nat Methods},
+keywords = {Alternative Splicing,Base Sequence,DNA-Binding Proteins/chemistry/genetics/metabolism,Exons/genetics,Heterogeneous-Nuclear Ribonucleoproteins/chemistry,Humans,Introns/genetics,MISO,Messenger/chemistry/genetics,NFATC Transcription Factors/genetics,Protein Isoforms/chemistry/genetics,RNA,RNA/*chemistry/genetics,RNA/*methods,Reverse Transcriptase Polymerase Chain Reaction/me,Sequence Analysis},
+mendeley-groups = {.DRIMSeq paper,RNA-seq alternative splicing},
+mendeley-tags = {MISO},
+number = {12},
+pages = {1009--1015},
+title = {{Analysis and design of RNA sequencing experiments for identifying isoform regulation}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/21057496$\backslash$nhttp://www.nature.com/nmeth/journal/v7/n12/pdf/nmeth.1528.pdf$\backslash$nhttp://www.nature.com/doifinder/10.1038/nmeth.1528},
+volume = {7},
+year = {2010}
+}
+
+
+%%———————————————————————————————————
+% sQTL Methods
+%%———————————————————————————————————
+
+@article{Zhao2013,
+abstract = {To characterize the genetic variation of alternative splicing, we develop GLiMMPS, a robust statistical method for detecting splicing quantitative trait loci (sQTLs) from RNA-seq data. GLiMMPS takes into account the individual variation in sequencing coverage and the noise prevalent in RNA-seq data. Analyses of simulated and real RNA-seq datasets demonstrate that GLiMMPS outperforms competing statistical models. Quantitative RT-PCR tests of 26 randomly selected GLiMMPS sQTLs yielded a validation rate of 100{\%}. As population-scale RNA-seq studies become increasingly affordable and popular, GLiMMPS provides a useful tool for elucidating the genetic variation of alternative splicing in humans and model organisms.},
+author = {Zhao, Keyan and Lu, Zhi-Xiang and Park, Juw Won and Zhou, Qing and Xing, Yi},
+file = {:Users/gosia/Documents/Mendeley Desktop/Zhao et al/Zhao et al. - 2013 - GLiMMPS Robust statistical model for regulatory variation of alternative splicing using RNA-seq data.pdf:pdf;:Users/gosia/Documents/Mendeley Desktop/Zhao et al/Zhao et al. - 2013 - GLiMMPS Robust statistical model for regulatory variation of alternative splicing using RNA-seq data(2).PDF:PDF},
+issn = {1465-6914},
+journal = {Genome biology},
+keywords = {GLiMMPS,alternative splicing,exon,generalized linear mixed model,rna-seq,sqtl},
+mendeley-groups = {sQTL analysis,sQTL analysis/Methods,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {GLiMMPS},
+number = {7},
+pages = {R74},
+pmid = {23876401},
+publisher = {BioMed Central Ltd},
+title = {{GLiMMPS: Robust statistical model for regulatory variation of alternative splicing using RNA-seq data.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/23876401},
+volume = {14},
+year = {2013}
+}
+@article{Jia2014,
+author = {Jia, Cheng and Hu, Yu and Liu, Yichuan and Li, Mingyao},
+doi = {10.4137/CIN.S13971.Received},
+file = {:Users/gosia/Documents/Mendeley Desktop/Jia et al/Jia et al. - 2014 - Mapping Splicing Quantitative Trait Loci in RNA-Seq.pdf:pdf},
+journal = {Cancer Informatics},
+mendeley-groups = {sQTL analysis,sQTL analysis/Methods,.DRIMSeq paper},
+pages = {35--43},
+title = {{Mapping Splicing Quantitative Trait Loci in RNA-Seq}},
+volume = {13},
+year = {2014}
+}
+
+@article{Monlong2014,
+author = {Monlong, Jean and Calvo, Miquel and Ferreira, Pedro G. and Guig{\'{o}}, Roderic},
+doi = {10.1038/ncomms5698},
+file = {:Users/gosia/Documents/Mendeley Desktop/Monlong et al/Monlong et al. - 2014 - Identification of genetic variants associated with alternative splicing using sQTLseekeR.pdf:pdf;:Users/gosia/Documents/Mendeley Desktop/Monlong et al/Monlong et al. - 2014 - Identification of genetic variants associated with alternative splicing using sQTLseekeR(2).pdf:pdf},
+issn = {2041-1723},
+journal = {Nature Communications},
+keywords = {sQTLseekeR},
+mendeley-groups = {sQTL analysis,sQTL analysis/Methods,.CM2 PhD report,.DRIMSeq paper},
+mendeley-tags = {sQTLseekeR},
+month = {aug},
+number = {May},
+pages = {4698},
+title = {{Identification of genetic variants associated with alternative splicing using sQTLseekeR}},
+url = {http://www.nature.com/doifinder/10.1038/ncomms5698},
+volume = {5},
+year = {2014}
+}
+
+@article{Pickrell2010,
+abstract = {Understanding the genetic mechanisms underlying natural variation in gene expression is a central goal of both medical and evolutionary genetics, and studies of expression quantitative trait loci (eQTLs) have become an important tool for achieving this goal. Although all eQTL studies so far have assayed messenger RNA levels using expression microarrays, recent advances in RNA sequencing enable the analysis of transcript variation at unprecedented resolution. We sequenced RNA from 69 lymphoblastoid cell lines derived from unrelated Nigerian individuals that have been extensively genotyped by the International HapMap Project. By pooling data from all individuals, we generated a map of the transcriptional landscape of these cells, identifying extensive use of unannotated untranslated regions and more than 100 new putative protein-coding exons. Using the genotypes from the HapMap project, we identified more than a thousand genes at which genetic variation influences overall expression levels or splicing. We demonstrate that eQTLs near genes generally act by a mechanism involving allele-specific expression, and that variation that influences the inclusion of an exon is enriched within and near the consensus splice sites. Our results illustrate the power of high-throughput sequencing for the joint analysis of variation in transcription, splicing and allele-specific expression across individuals.},
+author = {Pickrell, Joseph K and Marioni, John C and Pai, Athma A and Degner, Jacob F and Engelhardt, Barbara E and Nkadori, Everlyne and Veyrieras, Jean-Baptiste and Stephens, Matthew and Gilad, Yoav and Pritchard, Jonathan K},
+institution = {Department of Human Genetics, The University of Chicago, Chicago 60637, USA. pickrell@uchicago.edu},
+journal = {Nature},
+mendeley-groups = {sQTL analysis/Simulation,sQTL analysis/Data,.DRIMSeq paper},
+number = {7289},
+pages = {768--772},
+title = {{Understanding mechanisms underlying human gene expression variation with RNA sequencing.}},
+volume = {464},
+year = {2010}
+}
+
+
+@article{Montgomery2010,
+abstract = {Gene expression is an important phenotype that informs about genetic and environmental effects on cellular state. Many studies have previously identified genetic variants for gene expression phenotypes using custom and commercially available microarrays. Second generation sequencing technologies are now providing unprecedented access to the fine structure of the transcriptome. We have sequenced the mRNA fraction of the transcriptome in 60 extended HapMap individuals of European descent and have combined these data with genetic variants from the HapMap3 project. We have quantified exon abundance based on read depth and have also developed methods to quantify whole transcript abundance. We have found that approximately 10 million reads of sequencing can provide access to the same dynamic range as arrays with better quantification of alternative and highly abundant transcripts. Correlation with SNPs (small nucleotide polymorphisms) leads to a larger discovery of eQTLs (expression quantitative trait loci) than with arrays. We also detect a substantial number of variants that influence the structure of mature transcripts indicating variants responsible for alternative splicing. Finally, measures of allele-specific expression allowed the identification of rare eQTLs and allelic differences in transcript structure. This analysis shows that high throughput sequencing technologies reveal new properties of genetic effects on the transcriptome and allow the exploration of genetic effects in cellular processes.},
+author = {Montgomery, Stephen B and Sammeth, Micha and Gutierrez-Arcelus, Maria and Lach, Radoslaw P and Ingle, Catherine and Nisbett, James and Guigo, Roderic and Dermitzakis, Emmanouil T},
+file = {:Users/gosia/Documents/Mendeley Desktop/Montgomery et al/Montgomery et al. - 2010 - Transcriptome genetics using second generation sequencing in a Caucasian population.pdf:pdf},
+institution = {Department of Genetic Medicine and Development, University of Geneva Medical School, Geneva, 1211 Switzerland. stephen.montgomery@unige.ch},
+issn = {0028-0836},
+journal = {Nature},
+mendeley-groups = {sQTL analysis,sQTL analysis/Data,.DRIMSeq paper},
+number = {7289},
+pages = {773--777},
+pmid = {20220756},
+title = {{Transcriptome genetics using second generation sequencing in a Caucasian population.}},
+volume = {464},
+year = {2010}
+}
+
+
+@article{Battle2014,
+abstract = {Understanding the consequences of regulatory variation in the human genome remains a major challenge, with important implications for understanding gene regulation and interpreting the many disease-risk variants that fall outside of protein-coding regions. Here, we provide a direct window into the regulatory consequences of genetic variation by sequencing RNA from 922 genotyped individuals. We present a comprehensive description of the distribution of regulatory variation--by the specific expression phenotypes altered, the properties of affected genes, and the genomic characteristics of regulatory variants. We detect variants influencing expression of over ten thousand genes, and through the enhanced resolution offered by RNA-sequencing, for the first time we identify thousands of variants associated with specific phenotypes including splicing and allelic expression. Evaluating the effects of both long-range intra-chromosomal and trans (cross-chromosomal) regulation, we observe modularity in the regulatory network, with three-dimensional chromosomal configuration playing a particular role in regulatory modules within each chromosome. We also observe a significant depletion of regulatory variants affecting central and critical genes, along with a trend of reduced effect sizes as variant frequency increases, providing evidence that purifying selection and buffering have limited the deleterious impact of regulatory variation on the cell. Further, generalizing beyond observed variants, we have analyzed the genomic properties of variants associated with expression and splicing and developed a Bayesian model to predict regulatory consequences of genetic variants, applicable to the interpretation of individual genomes and disease studies. Together, these results represent a critical step toward characterizing the complete landscape of human regulatory variation.},
+author = {Battle, Alexis and Mostafavi, Sara and Zhu, Xiaowei and Potash, James B. and Weissman, Myrna M. and McCormick, Courtney and Haudenschild, Christian D. and Beckman, Kenneth B. and Shi, Jianxin and Mei, Rui and Urban, Alexander E. and Montgomery, Stephen B. and Levinson, Douglas F. and Koller, Daphne},
+file = {:Users/gosia/Documents/Mendeley Desktop/Battle et al/Battle et al. - 2014 - Characterizing the genetic basis of transcriptome diversity through RNA-sequencing of 922 individuals.pdf:pdf},
+journal = {Genome Research},
+mendeley-groups = {sQTL analysis,.DRIMSeq paper},
+number = {1},
+pages = {14--24},
+pmid = {24092820},
+title = {{Characterizing the genetic basis of transcriptome diversity through RNA-sequencing of 922 individuals}},
+volume = {24},
+year = {2014}
+}
+
+@article{Ongen2015Altrans,
+abstract = {With the advent of RNA-sequencing technology, we can detect different types of alternative splicing and determine how DNA variation regulates splicing. However, given the short read lengths used in most population-based RNA-sequencing experiments, quantifying transcripts accurately remains a challenge. Here we present a method, Altrans, for discovery of alternative splicing quantitative trait loci (asQTLs). To assess the performance of Altrans, we compared it to Cufflinks and MISO in simulations and Cufflinks for asQTL discovery. Simulations show that in the presence of unannotated transcripts, Altrans performs better in quantifications than Cufflinks and MISO. We have applied Altrans and Cufflinks to the Geuvadis dataset, which comprises samples from European and African populations, and discovered (FDR = 1{\%}) 1,427 and 166 asQTLs with Altrans and 1,737 and 304 asQTLs with Cufflinks for Europeans and Africans, respectively. We show that, by discovering a set of asQTLs in a smaller subset of European samples and replicating these in the remaining larger subset of Europeans, both methods achieve similar replication levels (95{\%} for both methods). We find many Altrans-specific asQTLs, which replicate to a high degree (93{\%}). This is mainly due to junctions absent from the annotations and hence not tested with Cufflinks. The asQTLs are significantly enriched for biochemically active regions of the genome, functional marks, and variants in splicing regions, highlighting their biological relevance. We present an approach for discovering asQTLs that is a more direct assessment of splicing compared to other methods and is complementary to other transcript quantification methods.},
+author = {Ongen, Halit and Dermitzakis, Emmanouil T.},
+journal = {American Journal of Human Genetics},
+mendeley-groups = {.DRIMSeq paper,sQTL analysis/Altrans},
+number = {4},
+pages = {567--575},
+publisher = {Cell Press},
+title = {{Alternative Splicing QTLs in European and African Populations}},
+volume = {97},
+year = {2015}
+}
+
+
+@article{Ongen2015,
+abstract = {MOTIVATION: In order to discover quantitative trait loci (QTLs), multi-dimensional genomic data sets combining DNA-seq and ChiP-/RNA-seq require methods that rapidly correlate tens of thousands of molecular phenotypes with millions of genetic variants while appropriately controlling for multiple testing.$\backslash$n$\backslash$nRESULTS: We have developed FastQTL, a method that implements a popular cis-QTL mapping strategy in a user- and cluster-friendly tool. FastQTL also proposes an efficient permutation procedure to control for multiple testing. The outcome of permutations is modeled using beta distributions trained from a few permutations and from which adjusted p-values can be estimated at any level of significance with little computational cost. The Geuvadis {\&} GTEx pilot data sets can be now easily analyzed an order of magnitude faster than previous approaches.$\backslash$n$\backslash$nAVAILABILITY: Source code, binaries and comprehensive documentation of FastQTL are freely available to download at http://fastqtl.sourceforge.net/ CONTACT: olivier.delaneau@unige.ch.},
+author = {Ongen, Halit and Buil, Alfonso and Brown, Andrew Anand and Dermitzakis, Emmanouil T and Delaneau, Olivier},
+doi = {10.1093/bioinformatics/btv722},
+file = {:Users/gosia/Documents/Mendeley Desktop/Ongen et al/Ongen et al. - 2015 - Fast and efficient QTL mapper for thousands of molecular phenotypes.pdf:pdf;:Users/gosia/Documents/Mendeley Desktop/Ongen et al/Ongen et al. - 2015 - Fast and efficient QTL mapper for thousands of molecular phenotypes.doc:doc;:Users/gosia/Documents/Mendeley Desktop/Ongen et al/Ongen et al. - 2015 - Fast and efficient QTL mapper for thousands of molecular phenotypes(2).doc:doc},
+issn = {1367-4811},
+journal = {Bioinformatics (Oxford, England)},
+keywords = {FastQTL},
+mendeley-groups = {sQTL analysis/Methods,.DRIMSeq paper},
+mendeley-tags = {FastQTL},
+pages = {1--7},
+pmid = {26708335},
+title = {{Fast and efficient QTL mapper for thousands of molecular phenotypes.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/26708335},
+year = {2015}
+}
+
+%%———————————————————————————————————
+% Data
+%%———————————————————————————————————
+
+@article{Brooks2011,
+abstract = {Alternative splicing is generally controlled by proteins that bind directly to regulatory sequence elements and either activate or repress splicing of adjacent splice sites in a target pre-mRNA. Here, we have combined RNAi and mRNA-seq to identify exons that are regulated by Pasilla (PS), the Drosophila melanogaster ortholog of mammalian NOVA1 and NOVA2. We identified 405 splicing events in 323 genes that are significantly affected upon depletion of ps, many of which were annotated as being constitutively spliced. The sequence regions upstream and within PS-repressed exons and downstream from PS-activated exons are enriched for YCAY repeats, and these are consistent with the location of these motifs near NOVA-regulated exons in mammals. Thus, the RNA regulatory map of PS and NOVA1/2 is highly conserved between insects and mammals despite the fact that the target gene orthologs regulated by PS and NOVA1/2 are almost entirely nonoverlapping. This observation suggests that the regulatory codes of individual RNA binding proteins may be nearly immutable, yet the regulatory modules controlled by these proteins are highly evolvable.},
+author = {Brooks, Angela N and Yang, Li and Duff, Michael O and Hansen, Kasper D and Park, Jung W and Dudoit, Sandrine and Brenner, Steven E and Graveley, Brenton R},
+file = {:Users/gosia/Documents/Mendeley Desktop/Brooks et al/Brooks et al. - 2011 - Conservation of an RNA regulatory map between Drosophila and mammals.pdf:pdf;:Users/gosia/Documents/Mendeley Desktop/Brooks et al/Brooks et al. - 2011 - Conservation of an RNA regulatory map between Drosophila and mammals(2).pdf:pdf},
+institution = {Department of Molecular and Cell Biology, University of California, Berkeley, California 94720, USA.},
+journal = {Genome research},
+keywords = {Pasilla},
+mendeley-groups = {RNA-seq data,.DRIMSeq paper},
+mendeley-tags = {Pasilla},
+number = {2},
+pages = {193--202},
+title = {{Conservation of an RNA regulatory map between Drosophila and mammals.}},
+volume = {21},
+year = {2011}
+}
+
+
+
+@article{Kim2013a,
+abstract = {BACKGROUND: Deep sequencing techniques provide a remarkable opportunity for comprehensive understanding of tumorigenesis at the molecular level. As omics studies become popular, integrative approaches need to be developed to move from a simple cataloguing of mutations and changes in gene expression to dissecting the molecular nature of carcinogenesis at the systemic level and understanding the complex networks that lead to cancer development. RESULTS: Here, we describe a high-throughput, multi-dimensional sequencing study of primary lung adenocarcinoma tumors and adjacent normal tissues of six Korean female never-smoker patients. Our data encompass results from exome-seq, RNA-seq, small RNA-seq, and MeDIP-seq. We identified and validated novel genetic aberrations, including 47 somatic mutations and 19 fusion transcripts. One of the fusions involves the c-RET gene, which was recently reported to form fusion genes that may function as drivers of carcinogenesis in lung cancer patients. We also characterized gene expression profiles, which we integrated with genomic aberrations and gene regulations into functional networks. The most prominent gene network module that emerged indicates that disturbances in G2/M transition and mitotic progression are causally linked to tumorigenesis in these patients. Also, results from the analysis strongly suggest that several novel microRNA-target interactions represent key regulatory elements of the gene network. CONCLUSIONS: Our study not only provides an overview of the alterations occurring in lung adenocarcinoma at multiple levels from genome to transcriptome and epigenome, but also offers a model for integrative genomics analysis and proposes potential target pathways for the control of lung adenocarcinoma.},
+author = {Kim, Sang Cheol and Jung, Yeonjoo and Park, Jinah and Cho, Sooyoung and Seo, Chaehwa and Kim, Jaesang and Kim, Pora and Park, Jehwan and Seo, Jihae and Kim, Jiwoong and Park, Seongjin and Jang, Insu and Kim, Namshin and Yang, Jin Ok and Lee, Byungwook and Rho, Kyoohyoung and Jung, Yeonhwa and Keum, Juhee and Lee, Jinseon and Han, Jungho and Kang, Sangeun and Bae, Sujin and Choi, So Jung and Kim, Sujin and Lee, Jong Eun and Kim, Wankyu and Kim, Jhingook and Lee, Sanghyuk},
+file = {:Users/gosia/Documents/Mendeley Desktop/Kim et al/Kim et al. - 2013 - A High-Dimensional, Deep-Sequencing Study of Lung Adenocarcinoma in Female Never-Smokers.pdf:pdf},
+journal = {PLoS ONE},
+mendeley-groups = {RNA-seq data,.CM2 PhD report},
+number = {2},
+pmid = {23405175},
+title = {{A High-Dimensional, Deep-Sequencing Study of Lung Adenocarcinoma in Female Never-Smokers}},
+volume = {8},
+year = {2013}
+}
+
+@article{Lappalainen2013,
+abstract = {Genome sequencing projects are discovering millions of genetic variants in humans, and interpretation of their functional effects is essential for understanding the genetic basis of variation in human traits. Here we report sequencing and deep analysis of messenger RNA and microRNA from lymphoblastoid cell lines of 462 individuals from the 1000 Genomes Project--the first uniformly processed high-throughput RNA-sequencing data from multiple human populations with high-quality genome sequences. We discover extremely widespread genetic variation affecting the regulation of most genes, with transcript structure and expression level variation being equally common but genetically largely independent. Our characterization of causal regulatory variation sheds light on the cellular mechanisms of regulatory and loss-of-function variation, and allows us to infer putative causal variants for dozens of disease-associated loci. Altogether, this study provides a deep understanding of the cellular mechanisms of transcriptome variation and of the landscape of functional variants in the human genome.},
+author = {Lappalainen, Tuuli and Sammeth, Michael and Friedl{\"{a}}nder, Marc R and {'t Hoen}, Peter A C and Monlong, Jean and Rivas, Manuel A and Gonz{\`{a}}lez-Porta, Mar and Kurbatova, Natalja and Griebel, Thasso and Ferreira, Pedro G and Barann, Matthias and Wieland, Thomas and Greger, Liliana and van Iterson, Maarten and Alml{\"{o}}f, Jonas and Ribeca, Paolo and Pulyakhina, Irina and Esser, Daniela and Giger, Thomas and Tikhonov, Andrew and Sultan, Marc and Bertier, Gabrielle and MacArthur, Daniel G and Lek, Monkol and Lizano, Esther and Buermans, Henk P J and Padioleau, Ismael and Schwarzmayr, Thomas and Karlberg, Olof and Ongen, Halit and Kilpinen, Helena and Beltran, Sergi and Gut, Marta and Kahlem, Katja and Amstislavskiy, Vyacheslav and Stegle, Oliver and Pirinen, Matti and Montgomery, Stephen B and Donnelly, Peter and McCarthy, Mark I and Flicek, Paul and Strom, Tim M and Lehrach, Hans and Schreiber, Stefan and Sudbrak, Ralf and Carracedo, Angel and Antonarakis, Stylianos E and H{\"{a}}sler, Robert and Syv{\"{a}}nen, Ann-Christine and van Ommen, Gert-Jan and Brazma, Alvis and Meitinger, Thomas and Rosenstiel, Philip and Guig{\'{o}}, Roderic and Gut, Ivo G and Estivill, Xavier and Dermitzakis, Emmanouil T},
+file = {:Users/gosia/Documents/Mendeley Desktop/Lappalainen et al/Lappalainen et al. - 2013 - Transcriptome and genome sequencing uncovers functional variation in humans(2).pdf:pdf;:Users/gosia/Documents/Mendeley Desktop/Lappalainen et al/Lappalainen et al. - 2013 - Transcriptome and genome sequencing uncovers functional variation in humans.pdf:pdf},
+issn = {1476-4687},
+journal = {Nature},
+keywords = {Alleles,Cell Line,Exons,Exons: genetics,GEUVADIS,Gene Expression Profiling,Genetic Variation,Genetic Variation: genetics,Genome,High-Throughput Nucleotide Sequencing,Human,Human: genetics,Humans,Messenger,Messenger: analysis,Messenger: genetics,Polymorphism,Quantitative Trait Loci,Quantitative Trait Loci: genetics,RNA,Sequence Analysis,Single Nucleotide,Single Nucleotide: genetics,Transcriptome,Transcriptome: genetics,Transformed},
+mendeley-groups = {sQTL analysis/Geuvadis,.CM2 PhD report,sQTL analysis/Data,.DRIMSeq paper},
+mendeley-tags = {GEUVADIS},
+number = {7468},
+pages = {506--11},
+pmid = {24037378},
+title = {{Transcriptome and genome sequencing uncovers functional variation in humans.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3918453{\&}tool=pmcentrez{\&}rendertype=abstract},
+volume = {501},
+year = {2013}
+}
+
+
+@article{Cheung2010,
+abstract = {Expression levels of human genes vary extensively among individuals. This variation facilitates analyses of expression levels as quantitative phenotypes in genetic studies where the entire genome can be scanned for regulators without prior knowledge of the regulatory mechanisms, thus enabling the identification of unknown regulatory relationships. Here, we carried out such genetic analyses with a large sample size and identified cis- and trans-acting polymorphic regulators for about 1,000 human genes. We validated the cis-acting regulators by demonstrating differential allelic expression with sequencing of transcriptomes (RNA-Seq) and the trans-regulators by gene knockdown, metabolic assays, and chromosome conformation capture analysis. The majority of the regulators act in trans to the target (regulated) genes. Most of these trans-regulators were not known to play a role in gene expression regulation. The identification of these regulators enabled the characterization of polymorphic regulation of human gene expression at a resolution that was unattainable in the past.},
+author = {Cheung, Vivian G. and Nayak, Renuka R. and Wang, Isabel Xiaorong and Elwyn, Susannah and Cousins, Sarah M. and Morley, Michael and Spielman, Richard S.},
+journal = {PLoS Biology},
+mendeley-groups = {sQTL analysis/Data,.DRIMSeq paper},
+number = {9},
+title = {{Polymorphic cis- and Trans-Regulation of human gene expression}},
+volume = {8},
+year = {2010}
+}
+
+%%———————————————————————————————————
+% Intrinsic variability of gene expression
+%%———————————————————————————————————
+
+
+@article{Choi2009,
+annote = {10.1038/ng.319},
+author = {Choi, Jung Kyoon and Kim, Young-Joon},
+issn = {1061-4036},
+journal = {Nat Genet},
+mendeley-groups = {Biology,Biology/Intrinsic variability of gene expression,.DRIMSeq paper},
+month = {apr},
+number = {4},
+pages = {498--503},
+publisher = {Nature Publishing Group},
+title = {{Intrinsic variability of gene expression encoded in nucleosome positioning sequences}},
+url = {http://dx.doi.org/10.1038/ng.319 http://www.nature.com/ng/journal/v41/n4/suppinfo/ng.319{\_}S1.html},
+volume = {41},
+year = {2009}
+}
+
+@article{Singh2013,
+abstract = {Genetically identical cell populations exhibit considerable intercellular variation in the level of a given protein or mRNA. Both intrinsic and extrinsic sources of noise drive this variability in gene expression. More specifically, extrinsic noise is the expression variability that arises from cell-to-cell differences in cell-specific factors such as enzyme levels, cell size and cell cycle stage. In contrast, intrinsic noise is the expression variability that is not accounted for by extrinsic noise, and typically arises from the inherent stochastic nature of biochemical processes. Two-color reporter experiments are employed to decompose expression variability into its intrinsic and extrinsic noise components. Analytical formulas for intrinsic and extrinsic noise are derived for a class of stochastic gene expression models, where variations in cell-specific factors cause fluctuations in model parameters, in particular, transcription and/or translation rate fluctuations. Assuming mRNA production occurs in random bursts, transcription rate is represented by either the burst frequency (how often the bursts occur) or the burst size (number of mRNAs produced in each burst). Our analysis shows that fluctuations in the transcription burst frequency enhance extrinsic noise but do not affect the intrinsic noise. On the contrary, fluctuations in the transcription burst size or mRNA translation rate dramatically increase both intrinsic and extrinsic noise components. Interestingly, simultaneous fluctuations in transcription and translation rates arising from randomness in ATP abundance can decrease intrinsic noise measured in a two-color reporter assay. Finally, we discuss how these formulas can be combined with single-cell gene expression data from two-color reporter experiments for estimating model parameters.},
+author = {Singh, Abhyudai and Soltani, Mohammad},
+doi = {10.1371/journal.pone.0084301},
+issn = {1932-6203},
+journal = {PloS one},
+keywords = {Gene Expression Regulation,Gene Expression Regulation: genetics,Gene-Environment Interaction,Models, Biological,Protein Biosynthesis,Protein Biosynthesis: physiology,Stochastic Processes,Transcription, Genetic,Transcription, Genetic: physiology},
+mendeley-groups = {Biology,Biology/Intrinsic variability of gene expression,.DRIMSeq paper},
+month = {jan},
+number = {12},
+pages = {e84301},
+pmid = {24391934},
+publisher = {Public Library of Science},
+title = {{Quantifying intrinsic and extrinsic variability in stochastic gene expression models.}},
+url = {http://dx.doi.org/10.1371/journal.pone.0084301},
+volume = {8},
+year = {2013}
+}
+
+
+
+%%———————————————————————————————————
+% R packages
+%%———————————————————————————————————
+
+
+  @Manual{DRIMSeq,
+    title = {DRIMSeq: Differential splicing and sQTL analyses with
+Dirichlet-multinomial model in RNA-Seq},
+    author = {Malgorzata Nowicka},
+    year = {2016},
+    note = {R package version 1.0.0},
+  }
+
+
+  @Manual{PasillaTranscriptExpr,
+    title = {PasillaTranscriptExpr: Data package with transcript expression obtained with kallisto
+from pasilla knock-down RNA-Seq data from Brooks et al.},
+    author = {Malgorzata Nowicka},
+    year = {2016},
+    note = {R package version 1.0.0},
+  }
+
+
+  @Manual{GeuvadisTranscriptExpr,
+    title = {GeuvadisTranscriptExpr: Data package with transcript expression and bi-allelic genotypes
+from the GEUVADIS project},
+    author = {Malgorzata Nowicka},
+    year = {2016},
+    note = {R package version 1.0.0},
+  }
+
+@article{Robinson2010,
+abstract = {SUMMARY: It is expected that emerging digital gene expression (DGE) technologies will overtake microarray technologies in the near future for many functional genomics applications. One of the fundamental data analysis tasks, especially for gene expression studies, involves determining whether there is evidence that counts for a transcript or exon are significantly different across experimental conditions. edgeR is a Bioconductor software package for examining differential expression of replicated count data. An overdispersed Poisson model is used to account for both biological and technical variability. Empirical Bayes methods are used to moderate the degree of overdispersion across transcripts, improving the reliability of inference. The methodology can be used even with the most minimal levels of replication, provided at least one phenotype or experimental condition is replicated. The software may have other applications beyond sequencing data, such as proteome peptide count data. AVAILABILITY: The package is freely available under the LGPL licence from the Bioconductor web site (http://bioconductor.org).},
+author = {Robinson, Mark D and McCarthy, Davis J and Smyth, Gordon K},
+file = {:Users/gosia/Documents/Mendeley Desktop/Robinson, McCarthy, Smyth/Robinson, McCarthy, Smyth - 2010 - edgeR a Bioconductor package for differential expression analysis of digital gene expression data.pdf:pdf},
+institution = {Cancer Program, Garvan Institute of Medical Research, 384 Victoria Street, Darlinghurst, NSW 2010, Australia. mrobinson@wehi.edu.au},
+journal = {Bioinformatics (Oxford, England)},
+mendeley-groups = {RNA-seq DE/Gene DE,.DRIMSeq paper,RNA-seq DE/Gene DE/edgeR},
+number = {1},
+pages = {139--140},
+pmid = {19910308},
+title = {{edgeR: a Bioconductor package for differential expression analysis of digital gene expression data.}},
+volume = {26},
+year = {2010}
+}
+
+@misc{Burdett,
+author = {Burdett, T (EBI) and Hall, PN (NHGRI) and Hastings, E (EBI) and Hindorff, LA (NHGRI) and Junkins, HA (NHGRI) and Klemm, AK (NHGRI) and MacArthur, J (EBI) and Manolio, TA (NHGRI) and Morales, J (EBI) and Parkinson, H (EBI) and Welter, D (EBI)},
+keywords = {GWAS},
+mendeley-groups = {.DRIMSeq paper},
+mendeley-tags = {GWAS},
+title = {{The NHGRI-EBI Catalog of published genome-wide association studies}},
+url = {www.ebi.ac.uk/gwas}
+}
