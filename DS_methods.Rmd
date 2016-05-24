@@ -26,6 +26,17 @@ DS| [MISO](http://genes.mit.edu/burgelab/miso/) [@Katz2010] | [MISO](http://gene
 |sQTL| Pickrell et al. [@Pickrell2010]| | Local; exon usage| Modeling each exon separately| To account for the gene expression, it transforms exon quantifications into ratios; Association analyses between genotypes and splicing events were done with standard linear regressions between exon quantifications and genotypes| Using permutations for the FDR estimation|
 
 
+# Other overviews 
+
+Alamancos et al. [@Alamancos2014] provides a comprehensive overview of methods to study splicing from RNA-seq, which perform mapping, reconstruction of isoforms or splicing events, quantification and comparison. 
+
+Hooper et al. [@Hooper2014] investigates the performance of DS methods.
+
+Soneson et al. [@Soneson2016] compares different types of quantifications that can be used to conduct DS analyses.
+
+Kanitz et al. [@Kanitz2015] and Teng et al. [@Teng2016] provide an overview of methods for transcript quantification and investigate their performance. Additionally, Teng et al. developed a webtool where other methods can be submitted for comparison.
+
+
 # References
 
 
