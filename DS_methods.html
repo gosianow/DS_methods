@@ -9,8 +9,9 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Malgorzata Nowicka" />
 
-<meta name="date" content="2016-05-20" />
+<meta name="date" content="2016-05-24" />
 
 <title>Overview of methods for differential splicing and sQTL analyses</title>
 
@@ -116,7 +117,8 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Overview of methods for differential splicing and sQTL analyses</h1>
-<h4 class="date"><em>20 May 2016</em></h4>
+<h4 class="author"><em>Malgorzata Nowicka</em></h4>
+<h4 class="date"><em>24 May 2016</em></h4>
 
 </div>
 
@@ -145,191 +147,194 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td align="left">DS</td>
-<td align="left">voom-diffSplice (limma) <span class="citation">(1)</span></td>
-<td align="left">featureCounts (Rsubread) <span class="citation">(2)</span></td>
-<td align="left">Local; exon usage</td>
-<td align="left">At the gene level but exons are treated as independent</td>
-<td align="left">Fits, per gene, a normal weighted linear model with exon-condition interactions to voom-transformed counts (log-counts per million) <span class="citation">(3)</span>; Voom observational weights are inversely proportional to count variance and account for the mean-variance relationship within RNA-seq data; All exon-condition interactions are fitted at once; Fits sample effects to handle the gene expression variability; Involves sharing information between genes, for the dispersion estimation</td>
-<td align="left">Allows analysis with multiple covariates which can be continuous or categorical; Returns gene-level p-values</td>
-</tr>
-<tr class="even">
-<td align="left">DS</td>
-<td align="left">DEXSeq <span class="citation">(4)</span></td>
-<td align="left">DEXSeq/ HTSeq <span class="citation">(4,5)</span></td>
+<td align="left"><a href="http://bioconductor.org/packages/release/bioc/html/DEXSeq.html">DEXSeq</a> <span class="citation">(1)</span></td>
+<td align="left"><a href="http://bioconductor.org/packages/release/bioc/html/DEXSeq.html">DEXSeq</a>/ <a href="http://www-huber.embl.de/HTSeq/doc/overview.html">HTSeq</a> <span class="citation">(1,2)</span></td>
 <td align="left">Local; exon usage</td>
 <td align="left">At the gene level but exons are treated as independent</td>
 <td align="left">Fits, per gene, a generalized linear model with bin-condition interactions assuming the negative-binomial distribution for counts; Each exon-condition interaction is fitted within a separate model containing interaction coefficient for only this exon; Fits sample effects to handle the gene expression variability; Involves sharing information between genes, for the dispersion estimation</td>
 <td align="left">Allows analyses with multiple covariates; Returns exon-level p-values, but has a module to transform these p-values into gene-level adjusted p-values</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sQTL</td>
-<td align="left">Altrans/ FastQTL <span class="citation">(6,7)</span></td>
-<td align="left">Altrans <span class="citation">(6)</span></td>
+<td align="left"><a href="https://sourceforge.net/projects/altrans/">Altrans</a>/ <a href="http://fastqtl.sourceforge.net/">FastQTL</a> <span class="citation">(3,4)</span></td>
+<td align="left"><a href="https://sourceforge.net/projects/altrans/">Altrans</a> <span class="citation">(3)</span></td>
 <td align="left">Local; exon link (junction) usage</td>
 <td align="left">Modeling each exon link separately</td>
-<td align="left">For the exon-link quantifications, it uses the paired-end reads with mates mapping to different exons and junction reads, and account for the insert size; Inference based on the F value which is a ratio between the coverage of a link and the sum of coverages of all the links that the primary exon makes; Employs Pearson correlation, from FastQTL, as a measure of association between genotype and Gaussian transformed exon link ratios</td>
-<td align="left">Applies a permutation approach to account for the dependencies among the link quantifications of a gene and between the variants within the cis-window of that gene in order to detect the significant asQTL genes</td>
+<td align="left">For the exon-link quantifications, it uses the paired-end reads with mates mapping to different exons and junction reads, and account for the insert size; Inference based on the F value which is a ratio between the coverage of a link and the sum of coverages of all the links that the primary exon makes; Employs Pearson correlation, from <a href="http://fastqtl.sourceforge.net/">FastQTL</a>, as a measure of association between genotype and Gaussian transformed exon link ratios</td>
+<td align="left">Applies a permutation approach to estimate p-values</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">DS</td>
-<td align="left">rMATS <span class="citation">(8)</span></td>
-<td align="left">rMATS</td>
+<td align="left"><a href="http://rnaseq-mats.sourceforge.net/">rMATS</a> <span class="citation">(5)</span></td>
+<td align="left"><a href="http://rnaseq-mats.sourceforge.net/">rMATS</a></td>
 <td align="left">Local; splicing events</td>
 <td align="left">Modeling each splicing event separately</td>
 <td align="left">For the splicing event quantification, it uses the inclusion reads and exclusion reads (no reads that map to the body of constitutive exons); Uses a hierarchical model: binomial distribution for the inclusion read counts given the inclusion level PSI to model the estimation uncertainty of PSI in individual replicate and logit-normal mixed model for PSI with random effects for each sample to account for the variability among replicates within conditions</td>
 <td align="left">Allows unpaired and paired comparisons</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sQTL</td>
-<td align="left">GLiMMPS <span class="citation">(9)</span></td>
-<td align="left">GLiMMPS</td>
+<td align="left"><a href="http://www.mimg.ucla.edu/faculty/xing/glimmps/">GLiMMPS</a> <span class="citation">(6)</span></td>
+<td align="left"><a href="http://www.mimg.ucla.edu/faculty/xing/glimmps/">GLiMMPS</a></td>
 <td align="left">Local; splicing events</td>
 <td align="left">Modeling each splicing event separately</td>
 <td align="left">For the splicing event quantification, it uses the inclusion reads and exclusion reads (no reads that map to the body of constitutive exons); Uses a GLMM with a hierarchical model: binomial distribution for the inclusion read counts given the inclusion level PSI to model the estimation uncertainty of PSI in individual replicate and logit-normal mixed model for PSI with fixed effects for the genotype and random effects for each sample to account for the variability within the same genotype group;</td>
-<td align="left">Computation done with glmer function from R package lme4; Using permutations to estimated the FDR</td>
-</tr>
-<tr class="even">
-<td align="left">sQTL</td>
-<td align="left">Jia et al. <span class="citation">(10)</span></td>
-<td align="left">PennSeq <span class="citation">(11)</span></td>
-<td align="left">Local; splicing events</td>
-<td align="left">Modeling each splicing event separately</td>
-<td align="left">For the splicing event quantification, PennSeq uses all reads mapped to a given exon-trio, i.e., the inclusion reads and exclusion reads and reads that map to the body of the constitutive exons, and it accounts for the paired-end nature of the data; Applies a random-effects meta regression using logit-normal for inclusion levels PSI with fixed effects for the genotype, random effects for each sample and a component representing the PSI estimation uncertainty from PennSeq;</td>
-<td align="left">Computation is performed with metafor R package; Jia et al. considered also a beta regression and GLMM like in GliMMPS but REMR was performing the best</td>
+<td align="left">Computation done with glmer function from R package lme4; Using permutations for the FDR estimation</td>
 </tr>
 <tr class="odd">
+<td align="left">sQTL</td>
+<td align="left">Jia et al. <span class="citation">(7)</span></td>
+<td align="left"><a href="https://sourceforge.net/projects/pennseq/">PennSeq</a> <span class="citation">(8)</span></td>
+<td align="left">Local; splicing events</td>
+<td align="left">Modeling each splicing event separately</td>
+<td align="left">For the splicing event quantification, PennSeq uses all reads mapped to a given exon-trio, i.e., the inclusion reads and exclusion reads and reads that map to the body of the constitutive exons, and it accounts for the paired-end nature of the data; Applies a random-effects meta regression (REMR) using logit-normal for inclusion levels PSI with fixed effects for the genotype, random effects for each sample and a component representing the PSI estimation uncertainty from PennSeq;</td>
+<td align="left">Computation is performed with metafor R package; Jia et al. considered also a beta regression and GLMM like in <a href="http://www.mimg.ucla.edu/faculty/xing/glimmps/">GLiMMPS</a> but REMR was performing the best</td>
+</tr>
+<tr class="even">
 <td align="left">DS</td>
-<td align="left">MISO <span class="citation">(12)</span></td>
-<td align="left">MISO</td>
+<td align="left"><a href="http://genes.mit.edu/burgelab/miso/">MISO</a> <span class="citation">(9)</span></td>
+<td align="left"><a href="http://genes.mit.edu/burgelab/miso/">MISO</a></td>
 <td align="left">Local; splicing events; Global; transcript usage</td>
 <td align="left">Modeling each splicing event separately in exon-centric analyses; Multivariate for isoform-centric analyses</td>
 <td align="left">For the quantification of exon or isoform inclusion levels, it employs a Bayesian inference which uses the inclusion reads and exclusion reads and reads that map to the body of the constitutive exons and captures the information about library inserts in paired-end data; The inference about DS between two samples is based on the posterior probabilities of isoform inclusions (or exon-inclusions) which are compared using the Bayes factor</td>
 <td align="left">DS analysis only for 1 vs. 1 comparisons; Performs exon-centric and isoform-centric DS analyses</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">DS</td>
-<td align="left">Cuffdiff2 <span class="citation">(13)</span></td>
-<td align="left">Cufflinks <span class="citation">(14)</span></td>
+<td align="left"><a href="http://cole-trapnell-lab.github.io/cufflinks/">Cuffdiff2</a> <span class="citation">(10)</span></td>
+<td align="left"><a href="http://cole-trapnell-lab.github.io/cufflinks/">Cufflinks</a> <span class="citation">(11)</span></td>
 <td align="left">Global; transcript usage</td>
 <td align="left">Multivariate</td>
 <td align="left">Uses the Jensen-Shannon divergence metric on probability distributions of isoform proportions (obtained from Cufflinks) as a measure of changes in isoform relative abundances between samples; The test statistic is the square root of the Jensen-Shannon divergence divided by its standard error (one-sided t -test)</td>
 <td align="left">DS based on transcripts grouped by TSS or promoter usage</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sQTL</td>
-<td align="left">sQTLseekeR <span class="citation">(15)</span></td>
+<td align="left"><a href="https://github.com/jmonlong/sQTLseekeR">sQTLseekeR</a> <span class="citation">(12)</span></td>
 <td align="left"></td>
 <td align="left">Global; transcript usage</td>
 <td align="left">Multivariate</td>
 <td align="left">To account for the gene expression, it transforms transcript quantifications into ratios; To test for the association between a genotype and transcript ratios, it uses a test proposed by Anderson which is similar to a multivariate analysis of variance (MANOVA) without assuming any probabilistic distribution. The difference between the within-group and between-group variability is measured by a pseudo-F ratio score; The Hellinger distance in used as a dissimilarity measure between transcript ratios</td>
-<td align="left">Allows comparison between multiple groups of samples</td>
+<td align="left">Employs permutations to estimate p-values; Allows comparison between multiple groups of samples</td>
+</tr>
+<tr class="odd">
+<td align="left">DS</td>
+<td align="left"><a href="https://github.com/davidaknowles/leafcutter">LeafCutter</a> <span class="citation">(13)</span></td>
+<td align="left"><a href="https://github.com/davidaknowles/leafcutter">LeafCutter</a></td>
+<td align="left">Local; intron usage</td>
+<td align="left">Multivariate</td>
+<td align="left">For the quantification of intron excision, uses only the junction reads; For the DS inference, uses the Dirichlet-multinomial generalized linear model</td>
+<td align="left">Allows analyses with multiple covariates; Annotation free</td>
 </tr>
 <tr class="even">
+<td align="left">sQTL</td>
+<td align="left"><a href="https://github.com/davidaknowles/leafcutter">LeafCutter</a>/ <a href="http://fastqtl.sourceforge.net/">FastQTL</a> <span class="citation">(4,13)</span></td>
+<td align="left"><a href="https://github.com/davidaknowles/leafcutter">LeafCutter</a> <span class="citation">(13)</span></td>
+<td align="left">Local; intron usage</td>
+<td align="left">Modeling each intron separately</td>
+<td align="left">For the quantification of intron excision, uses only the junction reads; Inference based on the proportions of reads supporting excised introns; Employs Pearson correlation, from <a href="http://fastqtl.sourceforge.net/">FastQTL</a> <span class="citation">(4)</span>, as a measure of association between genotype and intron excision proportions</td>
+<td align="left">Applies a permutation approach to estimate p-values; Annotation free</td>
+</tr>
+<tr class="odd">
 <td align="left">DS and sQTL</td>
-<td align="left">DRIMSeq</td>
+<td align="left"><a href="https://www.bioconductor.org/packages/3.3/bioc/html/DRIMSeq.html">DRIMSeq</a></td>
 <td align="left"></td>
 <td align="left">Global; transcript usage</td>
 <td align="left">Multivariate</td>
 <td align="left">Uses the Dirichlet-multinomial distribution to model transcript counts of a gene in each condition and for the pooled data; To test for the differences in transcript proportions between conditions, DRIMSeq uses the LR statistic; Involves sharing information between genes, for the dispersion estimation</td>
-<td align="left">Allows comparison between multiple groups of samples; In sQTL analysis, a permutation approach is employed to account for the dependencies between variants (SNPs)</td>
+<td align="left">Allows comparison between multiple groups of samples; In sQTL analysis, a permutation approach is employed in p-value estimation to account for the dependencies between variants (SNPs)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sQTL</td>
-<td align="left">Lappalainen et al. (GEUVADIS) <span class="citation">(16)</span></td>
-<td align="left">FluxCapacitor <span class="citation">(17)</span></td>
+<td align="left">Lappalainen et al. (GEUVADIS) <span class="citation">(14)</span></td>
+<td align="left"><a href="http://sammeth.net/confluence/display/FLUX/Home">FluxCapacitor</a> <span class="citation">(15)</span></td>
 <td align="left">Global; transcript usage</td>
 <td align="left">Modeling each transcript separately</td>
 <td align="left">To account for the gene expression, they transformed transcript quantifications into ratios; They used a linear model implemented in Matrix eQTL to test each transcript separately for the association between its expression and genotype</td>
 <td align="left">FDR was estimated by permutations</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">sQTL</td>
-<td align="left">Montgomety et al. <span class="citation">(17)</span></td>
-<td align="left">FluxCapacitor <span class="citation">(17)</span></td>
+<td align="left">Montgomety et al. <span class="citation">(15)</span></td>
+<td align="left"><a href="http://sammeth.net/confluence/display/FLUX/Home">FluxCapacitor</a> <span class="citation">(15)</span></td>
 <td align="left">Local; splicing events</td>
 <td align="left">Modeling each splicing event separately</td>
 <td align="left">Association analyses between genotypes and splicing events conducted with Spearman rank correlation</td>
 <td align="left">P-value significance evaluated with permutations</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sQTL</td>
-<td align="left">Battle et al. <span class="citation">(18)</span></td>
-<td align="left">Cufflinks <span class="citation">(14)</span></td>
+<td align="left">Battle et al. <span class="citation">(16)</span></td>
+<td align="left"><a href="http://cole-trapnell-lab.github.io/cufflinks/">Cufflinks</a> <span class="citation">(11)</span></td>
 <td align="left">Global; transcript usage</td>
 <td align="left">Modeling each transcript separately</td>
 <td align="left">To account for the gene expression, it transforms transcript quantifications into ratios; Association analyses between genotypes and transcript ratios conducted with Spearman rank correlation</td>
 <td align="left">Bonferroni correction used to account for the number of SNPs tested per gene</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">sQTL</td>
-<td align="left">Pickrell et al. <span class="citation">(19)</span></td>
+<td align="left">Pickrell et al. <span class="citation">(17)</span></td>
 <td align="left"></td>
 <td align="left">Local; exon usage</td>
 <td align="left">Modeling each exon separately</td>
 <td align="left">To account for the gene expression, it transforms exon quantifications into ratios; Association analyses between genotypes and splicing events were done with standard linear regressions between exon quantifications and genotypes</td>
-<td align="left">Employed permutations to estimate the FDR</td>
+<td align="left">Using permutations for the FDR estimation</td>
 </tr>
 </tbody>
 </table>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
 <div id="refs" class="references">
-<div id="ref-Ritchie2015">
-<p>1. Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, et al. Limma powers differential expression analyses for RNA-sequencing and microarray studies. Nucleic Acids Research. Oxford University Press; 2015;43(7):e47. </p>
-</div>
-<div id="ref-Liao2014">
-<p>2. Liao Y, Smyth GK, Shi W. FeatureCounts: An efficient general purpose program for assigning sequence reads to genomic features. Bioinformatics. Oxford University Press; 2014;30(7):923–30. </p>
-</div>
-<div id="ref-Law2014">
-<p>3. Law CW, Chen Y, Shi W, Smyth GK. Voom: precision weights unlock linear model analysis tools for RNA-seq read counts. Genome biology [Internet]. 2014;15(2):R29. Available from: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4053721{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract" class="uri">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4053721{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract</a></p>
-</div>
 <div id="ref-Anders2012">
-<p>4. Anders S, Reyes A, Huber W. Detecting differential usage of exons from RNA-seq data. Genome Research. 2012;22(10):2008–17. </p>
+<p>1. Anders S, Reyes A, Huber W. Detecting differential usage of exons from RNA-seq data. Genome Research. 2012;22(10):2008–17. </p>
 </div>
 <div id="ref-Anders2015">
-<p>5. Anders S, Pyl PT, Huber W. HTSeq-A Python framework to work with high-throughput sequencing data. Bioinformatics. Oxford University Press; 2015;31(2):166–9. </p>
+<p>2. Anders S, Pyl PT, Huber W. HTSeq-A Python framework to work with high-throughput sequencing data. Bioinformatics. Oxford University Press; 2015;31(2):166–9. </p>
 </div>
 <div id="ref-Ongen2015Altrans">
-<p>6. Ongen H, Dermitzakis ET. Alternative Splicing QTLs in European and African Populations. American Journal of Human Genetics. Cell Press; 2015;97(4):567–75. </p>
+<p>3. Ongen H, Dermitzakis ET. Alternative Splicing QTLs in European and African Populations. American Journal of Human Genetics. Cell Press; 2015;97(4):567–75. </p>
 </div>
 <div id="ref-Ongen2015">
-<p>7. Ongen H, Buil A, Brown AA, Dermitzakis ET, Delaneau O. Fast and efficient QTL mapper for thousands of molecular phenotypes. Bioinformatics (Oxford, England) [Internet]. 2015;1–7. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/26708335" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/26708335</a></p>
+<p>4. Ongen H, Buil A, Brown AA, Dermitzakis ET, Delaneau O. Fast and efficient QTL mapper for thousands of molecular phenotypes. Bioinformatics (Oxford, England) [Internet]. 2015;1–7. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/26708335" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/26708335</a></p>
 </div>
 <div id="ref-Shen2014">
-<p>8. Shen S, Park JW, Lu Z-x, Lin L, Henry MD, Wu YN, et al. rMATS: robust and flexible detection of differential alternative splicing from replicate RNA-Seq data. Proceedings of the National Academy of Sciences of the United States of America [Internet]. 2014;111(51):E5593–601. Available from: <a href="http://www.pnas.org/content/111/51/E5593.long" class="uri">http://www.pnas.org/content/111/51/E5593.long</a></p>
+<p>5. Shen S, Park JW, Lu Z-x, Lin L, Henry MD, Wu YN, et al. rMATS: robust and flexible detection of differential alternative splicing from replicate RNA-Seq data. Proceedings of the National Academy of Sciences of the United States of America [Internet]. 2014;111(51):E5593–601. Available from: <a href="http://www.pnas.org/content/111/51/E5593.long" class="uri">http://www.pnas.org/content/111/51/E5593.long</a></p>
 </div>
 <div id="ref-Zhao2013">
-<p>9. Zhao K, Lu Z-X, Park JW, Zhou Q, Xing Y. GLiMMPS: Robust statistical model for regulatory variation of alternative splicing using RNA-seq data. Genome biology [Internet]. BioMed Central Ltd; 2013;14(7):R74. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/23876401" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/23876401</a></p>
+<p>6. Zhao K, Lu Z-X, Park JW, Zhou Q, Xing Y. GLiMMPS: Robust statistical model for regulatory variation of alternative splicing using RNA-seq data. Genome biology [Internet]. BioMed Central Ltd; 2013;14(7):R74. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/23876401" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/23876401</a></p>
 </div>
 <div id="ref-Jia2014">
-<p>10. Jia C, Hu Y, Liu Y, Li M. Mapping Splicing Quantitative Trait Loci in RNA-Seq. Cancer Informatics. 2014;13:35–43. </p>
+<p>7. Jia C, Hu Y, Liu Y, Li M. Mapping Splicing Quantitative Trait Loci in RNA-Seq. Cancer Informatics. 2014;13:35–43. </p>
 </div>
 <div id="ref-Hu2014">
-<p>11. Hu Y, Liu Y, Mao X, Jia C, Ferguson JF, Xue C, et al. PennSeq: Accurate isoform-specific gene expression quantification in RNA-Seq by modeling non-uniform read distribution. Nucleic Acids Research. 2014;42(3). </p>
+<p>8. Hu Y, Liu Y, Mao X, Jia C, Ferguson JF, Xue C, et al. PennSeq: Accurate isoform-specific gene expression quantification in RNA-Seq by modeling non-uniform read distribution. Nucleic Acids Research. 2014;42(3). </p>
 </div>
 <div id="ref-Katz2010">
-<p>12. Katz Y, Wang ET, Airoldi EM, Burge CB. Analysis and design of RNA sequencing experiments for identifying isoform regulation. Nat Methods [Internet]. 2010;7(12):1009–15. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/21057496$\backslash$nhttp://www.nature.com/nmeth/journal/v7/n12/pdf/nmeth.1528.pdf$\backslash$nhttp://www.nature.com/doifinder/10.1038/nmeth.1528" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/21057496$\backslash$nhttp://www.nature.com/nmeth/journal/v7/n12/pdf/nmeth.1528.pdf$\backslash$nhttp://www.nature.com/doifinder/10.1038/nmeth.1528</a></p>
+<p>9. Katz Y, Wang ET, Airoldi EM, Burge CB. Analysis and design of RNA sequencing experiments for identifying isoform regulation. Nat Methods [Internet]. 2010;7(12):1009–15. Available from: <a href="http://www.ncbi.nlm.nih.gov/pubmed/21057496$\backslash$nhttp://www.nature.com/nmeth/journal/v7/n12/pdf/nmeth.1528.pdf$\backslash$nhttp://www.nature.com/doifinder/10.1038/nmeth.1528" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/21057496$\backslash$nhttp://www.nature.com/nmeth/journal/v7/n12/pdf/nmeth.1528.pdf$\backslash$nhttp://www.nature.com/doifinder/10.1038/nmeth.1528</a></p>
 </div>
 <div id="ref-Trapnell2013">
-<p>13. Trapnell C, Hendrickson DG, Sauvageau M, Goff L, Rinn JL, Pachter L. Differential analysis of gene regulation at transcript resolution with RNA-seq. Nature biotechnology [Internet]. Nature Publishing Group; 2013;31(1):46–53. Available from: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3869392{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract" class="uri">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3869392{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract</a></p>
+<p>10. Trapnell C, Hendrickson DG, Sauvageau M, Goff L, Rinn JL, Pachter L. Differential analysis of gene regulation at transcript resolution with RNA-seq. Nature biotechnology [Internet]. Nature Publishing Group; 2013;31(1):46–53. Available from: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3869392{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract" class="uri">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3869392{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract</a></p>
 </div>
 <div id="ref-Trapnell2010">
-<p>14. Trapnell C, Williams B a, Pertea G, Mortazavi A, Kwan G, Baren MJ van, et al. Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation. Nature biotechnology [Internet]. Nature Publishing Group; 2010;28(5):511–5. Available from: <a href="http://dx.doi.org/10.1038/nbt.1621" class="uri">http://dx.doi.org/10.1038/nbt.1621</a></p>
+<p>11. Trapnell C, Williams B a, Pertea G, Mortazavi A, Kwan G, Baren MJ van, et al. Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation. Nature biotechnology [Internet]. Nature Publishing Group; 2010;28(5):511–5. Available from: <a href="http://dx.doi.org/10.1038/nbt.1621" class="uri">http://dx.doi.org/10.1038/nbt.1621</a></p>
 </div>
 <div id="ref-Monlong2014">
-<p>15. Monlong J, Calvo M, Ferreira PG, Guigó R. Identification of genetic variants associated with alternative splicing using sQTLseekeR. Nature Communications [Internet]. 2014 Aug;5(May):4698. Available from: <a href="http://www.nature.com/doifinder/10.1038/ncomms5698" class="uri">http://www.nature.com/doifinder/10.1038/ncomms5698</a></p>
+<p>12. Monlong J, Calvo M, Ferreira PG, Guigó R. Identification of genetic variants associated with alternative splicing using sQTLseekeR. Nature Communications [Internet]. 2014 Aug;5(May):4698. Available from: <a href="http://www.nature.com/doifinder/10.1038/ncomms5698" class="uri">http://www.nature.com/doifinder/10.1038/ncomms5698</a></p>
+</div>
+<div id="ref-Li2016">
+<p>13. Li YI, Knowles DA, Pritchard JK. LeafCutter: Annotation-free quantification of RNA splicing. bioRxiv [Internet]. 2016 Mar; Available from: <a href="http://biorxiv.org/content/early/2016/03/16/044107.abstract" class="uri">http://biorxiv.org/content/early/2016/03/16/044107.abstract</a></p>
 </div>
 <div id="ref-Lappalainen2013">
-<p>16. Lappalainen T, Sammeth M, Friedländer MR, ’t Hoen PAC, Monlong J, Rivas MA, et al. Transcriptome and genome sequencing uncovers functional variation in humans. Nature [Internet]. 2013;501(7468):506–11. Available from: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3918453{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract" class="uri">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3918453{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract</a></p>
+<p>14. Lappalainen T, Sammeth M, Friedländer MR, ’t Hoen PAC, Monlong J, Rivas MA, et al. Transcriptome and genome sequencing uncovers functional variation in humans. Nature [Internet]. 2013;501(7468):506–11. Available from: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3918453{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract" class="uri">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3918453{\&amp;}tool=pmcentrez{\&amp;}rendertype=abstract</a></p>
 </div>
 <div id="ref-Montgomery2010">
-<p>17. Montgomery SB, Sammeth M, Gutierrez-Arcelus M, Lach RP, Ingle C, Nisbett J, et al. Transcriptome genetics using second generation sequencing in a Caucasian population. Nature. Department of Genetic Medicine; Development, University of Geneva Medical School, Geneva, 1211 Switzerland. stephen.montgomery@unige.ch; 2010;464(7289):773–7. </p>
+<p>15. Montgomery SB, Sammeth M, Gutierrez-Arcelus M, Lach RP, Ingle C, Nisbett J, et al. Transcriptome genetics using second generation sequencing in a Caucasian population. Nature. Department of Genetic Medicine; Development, University of Geneva Medical School, Geneva, 1211 Switzerland. stephen.montgomery@unige.ch; 2010;464(7289):773–7. </p>
 </div>
 <div id="ref-Battle2014">
-<p>18. Battle A, Mostafavi S, Zhu X, Potash JB, Weissman MM, McCormick C, et al. Characterizing the genetic basis of transcriptome diversity through RNA-sequencing of 922 individuals. Genome Research. 2014;24(1):14–24. </p>
+<p>16. Battle A, Mostafavi S, Zhu X, Potash JB, Weissman MM, McCormick C, et al. Characterizing the genetic basis of transcriptome diversity through RNA-sequencing of 922 individuals. Genome Research. 2014;24(1):14–24. </p>
 </div>
 <div id="ref-Pickrell2010">
-<p>19. Pickrell JK, Marioni JC, Pai AA, Degner JF, Engelhardt BE, Nkadori E, et al. Understanding mechanisms underlying human gene expression variation with RNA sequencing. Nature. Department of Human Genetics, The University of Chicago, Chicago 60637, USA. pickrell@uchicago.edu; 2010;464(7289):768–72. </p>
+<p>17. Pickrell JK, Marioni JC, Pai AA, Degner JF, Engelhardt BE, Nkadori E, et al. Understanding mechanisms underlying human gene expression variation with RNA sequencing. Nature. Department of Human Genetics, The University of Chicago, Chicago 60637, USA. pickrell@uchicago.edu; 2010;464(7289):768–72. </p>
 </div>
 </div>
 </div>
