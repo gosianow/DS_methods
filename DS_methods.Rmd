@@ -7,6 +7,8 @@ bibliography: refs.bib
 csl: f1000research.csl
 ---
 
+The source code of this file can be found on [GitHub](https://github.com/gosianow/DS_methods).
+
 | Application | DS method | Counting method | Type of DS analysis| Modeling| Description of the DS method| Extra notes/features|
 |:-----|:-----|:-----|:-----|:-------|------------------------|--------------|
 |DS| [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html) [@Anders2012] | [DEXSeq](http://bioconductor.org/packages/release/bioc/html/DEXSeq.html)/ [HTSeq](http://www-huber.embl.de/HTSeq/doc/overview.html) [@Anders2012; @Anders2015]| Local; exon usage| At the gene level but exons are treated as independent| Fits, per gene, a generalized linear model with bin-condition interactions assuming the negative-binomial distribution for counts; Each exon-condition interaction is fitted within a separate model containing interaction coefficient for only this exon; Fits sample effects to handle the gene expression variability; Involves sharing information between genes, for the dispersion estimation| Allows analyses with multiple covariates; Returns exon-level p-values, but has a module to transform these p-values into gene-level adjusted p-values|
@@ -28,13 +30,14 @@ DS| [MISO](http://genes.mit.edu/burgelab/miso/) [@Katz2010] | [MISO](http://gene
 
 # Other overviews 
 
-Alamancos et al. [@Alamancos2014] provides a comprehensive overview of methods to study splicing from RNA-seq, which perform mapping, reconstruction of isoforms or splicing events, quantification and comparison. 
+Alamancos et al. [@Alamancos2014] provide a comprehensive overview of methods to study splicing from RNA-seq, which perform mapping, reconstruction of isoforms or splicing events, quantification and comparison. 
 
-Hooper et al. [@Hooper2014] investigates the performance of DS methods.
+Hooper et al. [@Hooper2014] investigate the performance of DS methods.
 
-Soneson et al. [@Soneson2016] compares different types of quantifications that can be used to conduct DS analyses.
+Soneson et al. [@Soneson2016] compare different types of quantifications (e.g., exon counts, transcript abundances) to conduct DS analyses. They developed a simulation framework that mimic real RNA-seq data and can be used for comparison of other DS methods. 
 
 Kanitz et al. [@Kanitz2015] and Teng et al. [@Teng2016] provide an overview of methods for transcript quantification and investigate their performance. Additionally, Teng et al. developed a webtool where other methods can be submitted for comparison.
+
 
 
 # References
